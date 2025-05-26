@@ -33,6 +33,7 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Emer
     private RecyclerView recyclerViewContacts;
     private FloatingActionButton fabAddContact;
     private View emptyStateView;
+    private com.google.android.material.button.MaterialButton btnAddFirstContact;
 
     // Utilities
     private ContactManager contactManager;
@@ -79,6 +80,7 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Emer
         recyclerViewContacts = findViewById(R.id.recycler_view_contacts);
         fabAddContact = findViewById(R.id.fab_add_contact);
         emptyStateView = findViewById(R.id.empty_state_view);
+        btnAddFirstContact = findViewById(R.id.btn_add_first_contact);
 
         // Setup RecyclerView
         recyclerViewContacts.setLayoutManager(new LinearLayoutManager(this));
@@ -87,6 +89,11 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Emer
 
         // Setup FAB
         fabAddContact.setOnClickListener(v -> showAddContactDialog());
+
+        // Setup empty state button
+        if (btnAddFirstContact != null) {
+            btnAddFirstContact.setOnClickListener(v -> showAddContactDialog());
+        }
     }
 
     /**

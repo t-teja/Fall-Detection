@@ -1,208 +1,320 @@
-2025-05-27 00:27:34.280  3254-4846  OplusAppQu...Controller system_server                        E  attachExStartingSurface not support issue ar:ActivityRecord{fd80e63 u0 com.tejalabs.falldetection/.MainActivity t1284} type:2
-2025-05-27 00:27:34.282  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 1 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 2000
-2025-05-27 00:27:34.291  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 1 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 2000
-2025-05-27 00:27:34.291  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 1 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 2000
-2025-05-27 00:27:34.318  1872-1872  qspmHal                 vendor.qti.qspmhal-service           E  setAppInfoH atPid = 29212, gpuFname:com.tejalabs.falldetection, gpuFver:11
-2025-05-27 00:27:34.321  4417-4417  UAH_JNI                 com.android.launcher                 E  uah_event_acquire ! cmdId: 85 ,strPkg: com.tejalabs.falldetection, strIdent: GpuBoost, timeout: 1000
-2025-05-27 00:27:34.364  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 0 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 720
-2025-05-27 00:27:34.373  3254-3339  OplusThermalStats       system_server                        E  Error getting package info: com.tejalabs.falldetection
----------------------------- PROCESS STARTED (29212) for package com.tejalabs.falldetection ----------------------------
-2025-05-27 00:27:34.481 29212-29212 nativeloader            com.tejalabs.falldetection           D  Configuring clns-6 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/lib/arm64:/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.tejalabs.falldetection
-2025-05-27 00:27:34.481 29212-29212 nativeloader            com.tejalabs.falldetection           D  Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libQOC.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libAPSClient-cmd-jni-extension.oplus.so:libsatellite_audio_jni.oplus.so:libortc_so.oplus.so:libsoundtouch.oplus.so:libsoundtouch_jni.oplus.so:libupdateprof.qti.so:libthermalclient.qti.so:libQOC.qti.so:libqape.qti.so:libqesdk_ndk_platform.qti.so:liblistenjni.qti.so
-2025-05-27 00:27:34.481 29212-29212 ApplicationLoaders      com.tejalabs.falldetection           D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
-2025-05-27 00:27:34.481 29212-29212 ApplicationLoaders      com.tejalabs.falldetection           D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
-2025-05-27 00:27:34.482 29212-29212 ziparchive              com.tejalabs.falldetection           W  Unable to open '/data/data/com.tejalabs.falldetection/code_cache/.overlay/base.apk/classes4.dm': No such file or directory
-2025-05-27 00:27:34.482 29212-29212 ziparchive              com.tejalabs.falldetection           W  Unable to open '/data/data/com.tejalabs.falldetection/code_cache/.overlay/base.apk/classes7.dm': No such file or directory
-2025-05-27 00:27:34.483 29212-29212 ziparchive              com.tejalabs.falldetection           W  Unable to open '/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.dm': No such file or directory
-2025-05-27 00:27:34.483 29212-29212 ziparchive              com.tejalabs.falldetection           W  Unable to open '/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.dm': No such file or directory
-2025-05-27 00:27:34.569 29212-29212 nativeloader            com.tejalabs.falldetection           D  Configuring clns-7 for other apk /data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/lib/arm64:/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.tejalabs.falldetection
-2025-05-27 00:27:34.573 29212-29212 nativeloader            com.tejalabs.falldetection           D  Load libframework-connectivity-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity.jar: ok
-2025-05-27 00:27:34.576 29212-29212 GraphicsEnvironment     com.tejalabs.falldetection           V  Currently set values for:
-2025-05-27 00:27:34.576 29212-29212 GraphicsEnvironment     com.tejalabs.falldetection           V    angle_gl_driver_selection_pkgs=[""]
-2025-05-27 00:27:34.576 29212-29212 GraphicsEnvironment     com.tejalabs.falldetection           V    angle_gl_driver_selection_values=[""]
-2025-05-27 00:27:34.576 29212-29212 GraphicsEnvironment     com.tejalabs.falldetection           V  ANGLE GameManagerService for com.tejalabs.falldetection: false
-2025-05-27 00:27:34.576 29212-29212 GraphicsEnvironment     com.tejalabs.falldetection           V  com.tejalabs.falldetection is not listed in per-application setting
-2025-05-27 00:27:34.576 29212-29212 GraphicsEnvironment     com.tejalabs.falldetection           V  Updatable production driver is not supported on the device.
-2025-05-27 00:27:34.578 29212-29212 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
-2025-05-27 00:27:34.581 29212-29212 nativeloader            com.tejalabs.falldetection           D  Load libSchedAssistJni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
-2025-05-27 00:27:34.581 29212-29212 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
-2025-05-27 00:27:34.581 29212-29212 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
-2025-05-27 00:27:34.581 29212-29212 SchedAssist             com.tejalabs.falldetection           E  sysOpen failed with error=Permission denied
-2025-05-27 00:27:34.581 29212-29212 SchedAssist             com.tejalabs.falldetection           E  open sharedFd failed with error=Permission denied
-2025-05-27 00:27:34.581 29212-29212 SchedAssist             com.tejalabs.falldetection           E  open sharedFd failed with error=Permission denied
-2025-05-27 00:27:34.581 29212-29212 SchedAssist             com.tejalabs.falldetection           E  open sharedFd failed with error=Permission denied
-2025-05-27 00:27:34.583 29212-29212 OplusGraphicsEvent      com.tejalabs.falldetection           D  OplusGraphicsEventListener create now!
-2025-05-27 00:27:34.584 29212-29212 OplusGraphicsEvent      com.tejalabs.falldetection           D  addEventListener success!
-2025-05-27 00:27:34.585  3254-14442 ScrollOpti...rfService] system_server                        E  isScrollOptimEnable: pkgName = com.tejalabs.falldetection, output = Bundle[{pre_anim_enable=true, frame_insert_list=null, frame_insert_default_num=1, scroll_changed_enable_list=null}]
-2025-05-27 00:27:34.585 29212-29212 ScrollOpti...igManager] com.tejalabs.falldetection           D  initOptConfig: pkg= com.tejalabs.falldetection, mOptEnable= true, mAnimAheadEnable= true, mInsertDefaultNum= 1, mFrameInsertEnableList= {}, mSCEnableList= []
-2025-05-27 00:27:34.585 29212-29212 WM-WrkMgrInitializer    com.tejalabs.falldetection           D  Initializing WorkManager with default configuration.
-2025-05-27 00:27:34.601 29212-29212 WM-PackageManagerHelper com.tejalabs.falldetection           D  Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
-2025-05-27 00:27:34.601 29212-29212 WM-Schedulers           com.tejalabs.falldetection           D  Created SystemJobScheduler and enabled SystemJobService
-2025-05-27 00:27:34.610 29212-29212 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
-2025-05-27 00:27:34.612 29212-29212 OpenGLRenderer          com.tejalabs.falldetection           I  SupportApps size 0
-2025-05-27 00:27:34.614 29212-29236 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
-2025-05-27 00:27:34.614 29212-29236 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
-2025-05-27 00:27:34.615 29212-29212 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
-2025-05-27 00:27:34.616 29212-29238 colorx                  com.tejalabs.falldetection           D  Successfully found ColorX_Check .
-2025-05-27 00:27:34.616 29212-29238 colorx                  com.tejalabs.falldetection           D  Not available for this game.
-2025-05-27 00:27:34.626 29212-29212 AppCompatDelegate       com.tejalabs.falldetection           D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
-2025-05-27 00:27:34.630 29212-29234 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 160794467; UID 10359; state: ENABLED
-2025-05-27 00:27:34.636 29212-29212 oplus.andr...actoryImpl com.tejalabs.falldetection           I  Unknow feature:IOplusTextViewRTLUtilForUG
-2025-05-27 00:27:34.638 29212-29212 nativeloader            com.tejalabs.falldetection           D  Load liboplushwui_jni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
-2025-05-27 00:27:34.648 29212-29212 s.falldetection         com.tejalabs.falldetection           W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
-2025-05-27 00:27:34.649 29212-29212 ScrollOpti...tionHelper com.tejalabs.falldetection           D  can't find the config file for optimizaiton
-2025-05-27 00:27:34.649 29212-29212 ScrollOpti...tionHelper com.tejalabs.falldetection           D  will not debug for debug is false
-2025-05-27 00:27:34.649 29212-29212 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 171228096; UID 10359; state: ENABLED
-2025-05-27 00:27:34.649 29212-29212 oplus.andr...actoryImpl com.tejalabs.falldetection           I  get feature:IOplusDynamicVsyncFeature
-2025-05-27 00:27:34.649 29212-29212 oplus.andr...actoryImpl com.tejalabs.falldetection           I  get feature:IOplusDynamicVsyncFeature
-2025-05-27 00:27:34.649 29212-29212 oplus.andr...actoryImpl com.tejalabs.falldetection           I  get feature:IOplusDynamicVsyncFeature
-2025-05-27 00:27:34.651 29212-29212 OplusOverS...lerExtImpl com.tejalabs.falldetection           D  Success to read Oplus Scroll Rus list, com.tejalabs.falldetection is enabled? false
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MIN_VELOCITY_ADJUST_FRICTION 1000.0
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MIN_VELOCITY_ADJUST_FRICTION 1000.0
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MID_VELOCITY_ADJUST_FRICTION 4000.0
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MID_VELOCITY_ADJUST_FRICTION 4000.0
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MAX_VELOCITY_ADJUST_FRICTION 10000.0
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MAX_VELOCITY_ADJUST_FRICTION 10000.0
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  android.widget.OplusSpringOverScroller@d92cc14 set OPLUS_FLING_FRICTION_NORMAL 0.12
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MID_FLING_BASE_FRICTION 2.5
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MID_FLING_BASE_FRICTION 2.5
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set SLOW_FLING_BASE_FRICTION 2.5
-2025-05-27 00:27:34.651 29212-29212 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set SLOW_FLING_BASE_FRICTION 2.5
-2025-05-27 00:27:34.653 29212-29212 OplusCusto...ionManager com.tejalabs.falldetection           E  sInstance is null, start a new sInstance
-2025-05-27 00:27:34.655 29212-29212 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 210923482; UID 10359; state: ENABLED
-2025-05-27 00:27:34.679 29212-29212 OplusInputMethodUtil    com.tejalabs.falldetection           D  init sDebug to false, init sDebugIme to false, init sAlwaysOn to false
-2025-05-27 00:27:34.679 29212-29212 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass InputMethodManager.DEBUG = false
-2025-05-27 00:27:34.679 29212-29212 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass ImeFocusController.DEBUG = false
-2025-05-27 00:27:34.679 29212-29212 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass BaseInputConnection.DEBUG = false
-2025-05-27 00:27:34.687 29212-29212 MainActivity            com.tejalabs.falldetection           D  MainActivity created
-2025-05-27 00:27:34.695 29212-29212 ContactManager          com.tejalabs.falldetection           D  ContactManager initialized with 0 contacts
-2025-05-27 00:27:34.697 29212-29212 DataLogger              com.tejalabs.falldetection           D  Log directory initialized: /data/user/0/com.tejalabs.falldetection/files/fall_detection_logs
-2025-05-27 00:27:34.697 29212-29212 MainActivity            com.tejalabs.falldetection           D  Utilities initialized successfully
-2025-05-27 00:27:34.699 29212-29212 MainActivity            com.tejalabs.falldetection           D  All permissions granted
-2025-05-27 00:27:34.701 29212-29212 MainActivity            com.tejalabs.falldetection           D  Service binding attempted: true
-2025-05-27 00:27:34.702 29212-29212 DataLogger              com.tejalabs.falldetection           D  System event logged - Type: APP, Message: MainActivity created
-2025-05-27 00:27:34.705 29212-29212 ScrollOpti...neManager] com.tejalabs.falldetection           D  updateCurrentActivity: mCurrentActivityName=com.tejalabs.falldetection.MainActivity, isOptEnable=true, isAnimAheadEnable=true, isFrameInsertEnable=true, InsertNum=1, isEnabledForScrollChanged=false
-2025-05-27 00:27:34.705 29212-29212 ActivityThread          com.tejalabs.falldetection           D  ComponentInfo{com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity} checkFinished=false 2
-2025-05-27 00:27:34.705 29212-29212 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
-2025-05-27 00:27:34.707 29212-29212 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
-2025-05-27 00:27:34.707 29212-29212 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libguiextimpl.so
-2025-05-27 00:27:34.707 29212-29212 nativeloader            com.tejalabs.falldetection           D  Load liboplusgui_jni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
-2025-05-27 00:27:34.710 29212-29212 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 237531167; UID 10359; state: DISABLED
-2025-05-27 00:27:34.711 29212-29212 DynamicFra...igManager] com.tejalabs.falldetection           I  initFrameRateConfig: 
-                                                                                                    	levels: [120, 60]
-                                                                                                    	thresholds: [200]
-                                                                                                    	scrollbar fade frame rate: 0
-2025-05-27 00:27:34.712 29212-29212 DynamicFra...igManager] com.tejalabs.falldetection           I  FRTCConfigManager: FRTC_CAPABILITY = 120, package name = com.tejalabs.falldetection, WINDOW_ANIMATION_SPEED_RATE = 10, SCROLL_ANIMATION_SPEED_RATE = 20, MuitiWindowIdleFramerate = 60, PACKAGE_ENABLE = false
-2025-05-27 00:27:34.712 29212-29212 DynamicFra...ontroller] com.tejalabs.falldetection           I  init info: mPackageName = com.tejalabs.falldetection, mIsEnabled = false
-2025-05-27 00:27:34.712 29212-29212 WindowManager           com.tejalabs.falldetection           D  Add to mViews: DecorView@11e8172[MainActivity],pkg= com.tejalabs.falldetection
-2025-05-27 00:27:34.712 29212-29236 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
-2025-05-27 00:27:34.713 29212-29236 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libhwuiextimpl.so
-2025-05-27 00:27:34.713 29212-29212 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
-2025-05-27 00:27:34.713 29212-29212 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
-2025-05-27 00:27:34.720 29212-29212 ViewRootImplExtImpl     com.tejalabs.falldetection           D  onDisplayChanged -1 for VRI android.view.ViewRootImpl@4f42be
-2025-05-27 00:27:34.721 29212-29212 libc                    com.tejalabs.falldetection           W  Access denied finding property "ro.vendor.input.resample_latency_time"
-2025-05-27 00:27:34.722 29212-29212 InputEventReceiver      com.tejalabs.falldetection           D  Input log is disabled in InputEventReceiver.
-2025-05-27 00:27:34.722 29212-29212 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
-2025-05-27 00:27:34.722 29212-29212 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
-2025-05-27 00:27:34.723 29212-29212 Quality                 com.tejalabs.falldetection           I  Skipped: false 2 cost 17.75151 refreshRate 8333454 bit true processName com.tejalabs.falldetection
-2025-05-27 00:27:34.724 29212-29212 OplusBracketLog         com.tejalabs.falldetection           E  [OplusViewMirrorManager] updateHostViewRootIfNeeded, not support android.view.ViewRootImpl@4f42be
-2025-05-27 00:27:34.736 29212-29212 ViewRootImplExtImpl     com.tejalabs.falldetection           D  wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=808, relayoutAsync=false, newFlags=52953088, title=com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity
-2025-05-27 00:27:34.740 29212-29212 VRI[MainActivity]       com.tejalabs.falldetection           D  relayoutWindow result, sizeChanged:true, surfaceControlChanged:true, transformHintChanged:true, mSurfaceSize:Point(2120, 3000), mLastSurfaceSize:Point(0, 0), mWidth:-1, mHeight:-1, requestedWidth:2120, requestedHeight:3000, transformHint:7, lastTransformHint:-2147483648, installOrientation:3, displayRotation:0, isSurfaceValid:true, attr.flag:-2122252032, useBlast:true, tmpFrames:ClientWindowFrames{frame=[0,0][2120,3000] display=[0,0][2120,3000] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
-2025-05-27 00:27:34.741 29212-29212 VRI[MainActivity]       com.tejalabs.falldetection           W  updateBlastSurfaceIfNeeded, surfaceSize:Point(2120, 3000), lastSurfaceSize:Point(0, 0), format:-1, blastBufferQueue:null
-2025-05-27 00:27:34.743 29212-29212 BufferQueueConsumer     com.tejalabs.falldetection           D  [](id:721c00000000,api:0,p:-1,c:29212) connect: controlledByApp=false
-2025-05-27 00:27:34.744 29212-29212 s.falldetection         com.tejalabs.falldetection           W  Unable to find dolphin functions!
-2025-05-27 00:27:34.746 29212-29236 AdrenoGLES-0            com.tejalabs.falldetection           I  QUALCOMM build                   : 21ec731d58, Ifa39d99f17
-                                                                                                    Build Date                       : 05/31/24
-                                                                                                    OpenGL ES Shader Compiler Version: E031.45.02.13
-                                                                                                    Local Branch                     : 
-                                                                                                    Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.14.3.0.11.00.00.973.576
-                                                                                                    Remote Branch                    : NONE
-                                                                                                    Reconstruct Branch               : NOTHING
-2025-05-27 00:27:34.746 29212-29236 AdrenoGLES-0            com.tejalabs.falldetection           I  Build Config                     : S P 16.1.2 AArch64
-2025-05-27 00:27:34.746 29212-29236 AdrenoGLES-0            com.tejalabs.falldetection           I  Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
-2025-05-27 00:27:34.746 29212-29236 AdrenoGLES-0            com.tejalabs.falldetection           I  Driver Version                   : 0762.21
-2025-05-27 00:27:34.746 29212-29236 AdrenoGLES-0            com.tejalabs.falldetection           I  Process Name                     : com.tejalabs.falldetection
-2025-05-27 00:27:34.748 29212-29236 AdrenoGLES-0            com.tejalabs.falldetection           I  PFP: 0x01520175, ME: 0x01520023
-2025-05-27 00:27:34.751 29212-29236 AdrenoUtils             com.tejalabs.falldetection           I  <ReadGpuID:357>: Reading chip ID through GSL
-2025-05-27 00:27:34.756 29212-29236 BufferQueueProducer     com.tejalabs.falldetection           D  [VRI[MainActivity]#0(BLAST Consumer)0](id:721c00000000,api:1,p:29212,c:29212) connect: api=1 producerControlledByApp=true
-2025-05-27 00:27:34.756 29212-29236 OpenGLRenderer          com.tejalabs.falldetection           E  Unable to match the desired swap behavior.
-2025-05-27 00:27:34.756 29212-29212 SurfaceControl          com.tejalabs.falldetection           I   setExtendedRangeBrightness sc=Surface(name=com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity)/@0x42d9958,currentBufferRatio=1.0,desiredRatio=1.0
-2025-05-27 00:27:34.777 29212-29236 BLASTBufferQueue        com.tejalabs.falldetection           D  [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=2120x3000 mFrameNumber=1 applyTransaction=true mTimestamp=456534588820988(auto) mPendingTransactions.size=0 graphicBufferId=125464584650756 transform=4
-2025-05-27 00:27:34.777 29212-29236 VRI[MainActivity]       com.tejalabs.falldetection           D  Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true syncBuffer=false
-2025-05-27 00:27:34.777 29212-29212 VRI[MainActivity]       com.tejalabs.falldetection           D  draw finished. seqId=0
-2025-05-27 00:27:34.777 29212-29212 VRI[MainActivity]       com.tejalabs.falldetection           D  reportDrawFinished
-2025-05-27 00:27:34.778 29212-29212 ViewRootImplExtImpl     com.tejalabs.falldetection           D  setMaxDequeuedBufferCount: 2
-2025-05-27 00:27:34.780 29212-29212 FallDetectionService    com.tejalabs.falldetection           D  Fall Detection Service created
-2025-05-27 00:27:34.788  1831-6456  ANDR-PERF-LM            ven...ti.hardware.perf2-hal-service  E  PrefAppsDB: get_total_pkg_bindapp_count() 663: App = (com.tejalabs.falldetection) not found in LatData DB.
-2025-05-27 00:27:34.789 29212-29212 SensorDataCollector     com.tejalabs.falldetection           D  SensorDataCollector initialized
-2025-05-27 00:27:34.790 29212-29212 TinyMLProcessor         com.tejalabs.falldetection           W  Model file not found in assets, using fallback
-2025-05-27 00:27:34.790 29212-29212 TinyMLProcessor         com.tejalabs.falldetection           E  Error loading TensorFlow Lite model
-                                                                                                    java.io.FileNotFoundException: fall_detection_model.tflite
-                                                                                                    	at android.content.res.AssetManager.nativeOpenAssetFd(Native Method)
-                                                                                                    	at android.content.res.AssetManager.openFd(AssetManager.java:964)
-                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.loadModelFile(TinyMLProcessor.java:86)
-                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.initializeModel(TinyMLProcessor.java:57)
-                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.<init>(TinyMLProcessor.java:48)
-                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.initializeComponents(FallDetectionService.java:161)
-                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.onCreate(FallDetectionService.java:76)
-                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5010)
-                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0)
-                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511)
-                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106)
-                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255)
-                                                                                                    	at android.os.Looper.loop(Looper.java:364)
-                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979)
-                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
-                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572)
-                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053)
-2025-05-27 00:27:34.790 29212-29212 TinyMLProcessor         com.tejalabs.falldetection           W  Using fallback rule-based fall detection
-2025-05-27 00:27:34.791 29212-29212 ContactManager          com.tejalabs.falldetection           D  ContactManager initialized with 0 contacts
-2025-05-27 00:27:34.797 29212-29212 LocationService         com.tejalabs.falldetection           D  LocationService initialized
-2025-05-27 00:27:34.797 29212-29212 EmergencyManager        com.tejalabs.falldetection           D  EmergencyManager initialized
-2025-05-27 00:27:34.797 29212-29212 FallDetectionService    com.tejalabs.falldetection           D  Service components initialized successfully
-2025-05-27 00:27:34.799 29212-29212 AndroidRuntime          com.tejalabs.falldetection           D  Shutting down VM
-2025-05-27 00:27:34.799 29212-29212 AndroidRuntime          com.tejalabs.falldetection           E  FATAL EXCEPTION: main
-                                                                                                    Process: com.tejalabs.falldetection, PID: 29212
-                                                                                                    java.lang.RuntimeException: Unable to create service com.tejalabs.falldetection.services.FallDetectionService: java.lang.SecurityException: com.tejalabs.falldetection: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
-                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5035)
-                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0)
-                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511)
-                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106)
-                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255)
-                                                                                                    	at android.os.Looper.loop(Looper.java:364)
-                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979)
-                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
-                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572)
-                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053)
-                                                                                                    Caused by: java.lang.SecurityException: com.tejalabs.falldetection: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
-                                                                                                    	at android.os.Parcel.createExceptionOrNull(Parcel.java:3087)
-                                                                                                    	at android.os.Parcel.createException(Parcel.java:3071)
-                                                                                                    	at android.os.Parcel.readException(Parcel.java:3054)
-                                                                                                    	at android.os.Parcel.readException(Parcel.java:2996)
-                                                                                                    	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:5684)
-                                                                                                    	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:1868)
-                                                                                                    	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1804)
-                                                                                                    	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1792)
-                                                                                                    	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:765)
-                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.registerReceivers(FallDetectionService.java:195)
-                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.onCreate(FallDetectionService.java:79)
-                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5010)
-                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0) 
-                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511) 
-                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106) 
-                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255) 
-                                                                                                    	at android.os.Looper.loop(Looper.java:364) 
-                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979) 
-                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
-                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572) 
-                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053) 
-                                                                                                    Caused by: android.os.RemoteException: Remote stack trace:
-                                                                                                    	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(ActivityManagerService.java:15038)
-                                                                                                    	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:2570)
-                                                                                                    	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:3039)
-                                                                                                    	at android.os.Binder.execTransactInternal(Binder.java:1357)
-                                                                                                    	at android.os.Binder.execTransact(Binder.java:1288)
-2025-05-27 00:27:34.804  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 0 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 720
-2025-05-27 00:27:34.816 29212-29212 Process                 com.tejalabs.falldetection           I  Sending signal. PID: 29212 SIG: 9
----------------------------- PROCESS ENDED (29212) for package com.tejalabs.falldetection ----------------------------
-2025-05-27 00:27:34.844  1872-1872  qspmHal                 vendor.qti.qspmhal-service           E  setAppInfoH atPid = 29212, gpuFname:com.tejalabs.falldetection, gpuFver:10
+Executing tasks: [:app:assembleDebug] in project F:\Teja\ANDROID APPS\Fall Detect
+
+> Task :app:createDebugVariantModel UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:processDebugResources FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml:52: error: resource drawable/ic_contacts (aka com.tejalabs.falldetection:drawable/ic_contacts) not found.
+     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml:92: error: resource drawable/ic_add (aka com.tejalabs.falldetection:drawable/ic_add) not found.
+     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource drawable/ic_person (aka com.tejalabs.falldetection:drawable/ic_person) not found.
+     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource drawable/circle_background (aka com.tejalabs.falldetection:drawable/circle_background) not found.
+     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:68: error: resource drawable/ic_call (aka com.tejalabs.falldetection:drawable/ic_call) not found.
+     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:77: error: resource drawable/ic_edit (aka com.tejalabs.falldetection:drawable/ic_edit) not found.
+     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:85: error: resource drawable/ic_delete (aka com.tejalabs.falldetection:drawable/ic_delete) not found.
+     error: failed linking file resources.
+
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:processDebugResources'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:149)
+	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:147)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:135)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:338)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:325)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:304)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:283)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:321)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:304)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:309)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:250)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:227)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:210)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:193)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:166)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:93)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:57)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:54)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:54)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:50)
+	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:28)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.executeDelegateBroadcastingChanges(CaptureStateAfterExecutionStep.java:100)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:72)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:50)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:166)
+	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:70)
+	at org.gradle.internal.Either$Right.fold(Either.java:175)
+	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:59)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:68)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:46)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:25)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:36)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:22)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:91)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:55)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:55)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:37)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:76)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:37)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:94)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:49)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:71)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:45)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNonEmptySources(SkipEmptyWorkStep.java:177)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:81)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:53)
+	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
+	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:75)
+	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:41)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:32)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:287)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:21)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:27)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:42)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:31)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:64)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:146)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:135)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:338)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:325)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:304)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+Caused by: com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
+com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml:52: error: resource drawable/ic_contacts (aka com.tejalabs.falldetection:drawable/ic_contacts) not found.
+com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml:92: error: resource drawable/ic_add (aka com.tejalabs.falldetection:drawable/ic_add) not found.
+com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource drawable/ic_person (aka com.tejalabs.falldetection:drawable/ic_person) not found.
+com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource drawable/circle_background (aka com.tejalabs.falldetection:drawable/circle_background) not found.
+com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:68: error: resource drawable/ic_call (aka com.tejalabs.falldetection:drawable/ic_call) not found.
+com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:77: error: resource drawable/ic_edit (aka com.tejalabs.falldetection:drawable/ic_edit) not found.
+com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:85: error: resource drawable/ic_delete (aka com.tejalabs.falldetection:drawable/ic_delete) not found.
+error: failed linking file resources.
+
+	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create(Aapt2Exception.kt:45)
+	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create$default(Aapt2Exception.kt:33)
+	at com.android.builder.internal.aapt.v2.Aapt2DaemonImpl.doLink(Aapt2DaemonImpl.kt:188)
+	at com.android.builder.internal.aapt.v2.Aapt2Daemon.link(Aapt2Daemon.kt:124)
+	at com.android.builder.internal.aapt.v2.Aapt2DaemonManager$LeasedAaptDaemon.link(Aapt2DaemonManager.kt:176)
+	at com.android.builder.internal.aapt.v2.Aapt2DaemonManager$leasingAapt2Daemon$1.link(Aapt2DaemonManager.kt:199)
+	at com.android.build.gradle.internal.services.PartialInProcessResourceProcessor.link(PartialInProcessResourceProcessor.kt:51)
+	at com.android.build.gradle.internal.res.Aapt2ProcessResourcesRunnableKt.processResources(Aapt2ProcessResourcesRunnable.kt:74)
+	at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$Companion.invokeAaptForSplit(LinkApplicationAndroidResourcesTask.kt:941)
+	at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$Companion.access$invokeAaptForSplit(LinkApplicationAndroidResourcesTask.kt:796)
+	at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction.run(LinkApplicationAndroidResourcesTask.kt:431)
+	at com.android.build.gradle.internal.profile.ProfileAwareWorkAction.execute(ProfileAwareWorkAction.kt:74)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:169)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:114)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
+	... 2 more
+	Suppressed: java.util.NoSuchElementException: Unable to get absolute path from com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml
+                       because com.tejalabs.falldetection.app-mergeDebugResources-48 is not key in sourceSetPathMap.
+		at com.android.ide.common.resources.RelativeResourceUtils$relativeResourcePathToAbsolutePath$1.invoke(RelativeResourceUtils.kt:91)
+		at com.android.ide.common.resources.RelativeResourceUtils$relativeResourcePathToAbsolutePath$1.invoke(RelativeResourceUtils.kt:68)
+		at com.android.ide.common.resources.RelativeResourceUtils.relativeResourcePathToAbsolutePath(RelativeResourceUtils.kt:61)
+		at com.android.ide.common.blame.parser.aapt.Aapt2ErrorParser$MessageParser.parse(Aapt2ErrorParser.kt:124)
+		at com.android.ide.common.blame.parser.aapt.Aapt2ErrorParser.parse(Aapt2ErrorParser.kt:99)
+		at com.android.ide.common.blame.parser.aapt.Aapt2OutputParser.parse(Aapt2OutputParser.java:56)
+		at com.android.ide.common.blame.parser.ToolOutputParser.parseToolOutput(ToolOutputParser.java:84)
+		at com.android.build.gradle.internal.res.Aapt2ErrorUtils.rewriteException(Aapt2ErrorUtils.kt:217)
+		at com.android.build.gradle.internal.res.Aapt2ErrorUtils.rewriteLinkException(Aapt2ErrorUtils.kt:133)
+		at com.android.build.gradle.internal.res.Aapt2ProcessResourcesRunnableKt.processResources(Aapt2ProcessResourcesRunnable.kt:76)
+		at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$Companion.invokeAaptForSplit(LinkApplicationAndroidResourcesTask.kt:941)
+		at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$Companion.access$invokeAaptForSplit(LinkApplicationAndroidResourcesTask.kt:796)
+		at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction.run(LinkApplicationAndroidResourcesTask.kt:431)
+		at com.android.build.gradle.internal.profile.ProfileAwareWorkAction.execute(ProfileAwareWorkAction.kt:74)
+		at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+		at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+		at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+		at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+		at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+		at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+		at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+		at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+		at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+		at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+		at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+		at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+		at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+		at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+		at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+		at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+		at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+		at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:169)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
+		at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
+		at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
+		at org.gradle.internal.Factories$1.create(Factories.java:31)
+		at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
+		at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
+		at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:114)
+		at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
+		at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+		at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 3s
+30 actionable tasks: 1 executed, 29 up-to-date

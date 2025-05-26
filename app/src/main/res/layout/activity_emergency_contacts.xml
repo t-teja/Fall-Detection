@@ -47,7 +47,7 @@
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:src="@drawable/ic_contacts"
+                    android:src="@android:drawable/ic_menu_my_calendar"
                     android:alpha="0.3"
                     android:layout_marginBottom="16dp" />
 
@@ -69,10 +69,10 @@
                     android:layout_marginBottom="24dp" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_first_contact"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Add First Contact"
-                    android:onClick="showAddContactDialog"
                     style="@style/Widget.MaterialComponents.Button" />
 
             </LinearLayout>
@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_add"
+        android:src="@android:drawable/ic_input_add"
         app:tint="@android:color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
