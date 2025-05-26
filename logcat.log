@@ -44,13 +44,7 @@ FAILURE: Build failed with an exception.
 Execution failed for task ':app:processDebugResources'.
 > A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
    > Android resource linking failed
-     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml:52: error: resource drawable/ic_contacts (aka com.tejalabs.falldetection:drawable/ic_contacts) not found.
-     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml:92: error: resource drawable/ic_add (aka com.tejalabs.falldetection:drawable/ic_add) not found.
-     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource drawable/ic_person (aka com.tejalabs.falldetection:drawable/ic_person) not found.
-     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource drawable/circle_background (aka com.tejalabs.falldetection:drawable/circle_background) not found.
-     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:68: error: resource drawable/ic_call (aka com.tejalabs.falldetection:drawable/ic_call) not found.
-     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:77: error: resource drawable/ic_edit (aka com.tejalabs.falldetection:drawable/ic_edit) not found.
-     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:85: error: resource drawable/ic_delete (aka com.tejalabs.falldetection:drawable/ic_delete) not found.
+     com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource android:drawable/oval not found.
      error: failed linking file resources.
 
 
@@ -212,13 +206,7 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
 Caused by: com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
-com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml:52: error: resource drawable/ic_contacts (aka com.tejalabs.falldetection:drawable/ic_contacts) not found.
-com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml:92: error: resource drawable/ic_add (aka com.tejalabs.falldetection:drawable/ic_add) not found.
-com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource drawable/ic_person (aka com.tejalabs.falldetection:drawable/ic_person) not found.
-com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource drawable/circle_background (aka com.tejalabs.falldetection:drawable/circle_background) not found.
-com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:68: error: resource drawable/ic_call (aka com.tejalabs.falldetection:drawable/ic_call) not found.
-com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:77: error: resource drawable/ic_edit (aka com.tejalabs.falldetection:drawable/ic_edit) not found.
-com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:85: error: resource drawable/ic_delete (aka com.tejalabs.falldetection:drawable/ic_delete) not found.
+com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml:26: error: resource android:drawable/oval not found.
 error: failed linking file resources.
 
 	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create(Aapt2Exception.kt:45)
@@ -261,7 +249,7 @@ error: failed linking file resources.
 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
 	... 2 more
-	Suppressed: java.util.NoSuchElementException: Unable to get absolute path from com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/activity_emergency_contacts.xml
+	Suppressed: java.util.NoSuchElementException: Unable to get absolute path from com.tejalabs.falldetection.app-mergeDebugResources-48:/layout/item_emergency_contact.xml
                        because com.tejalabs.falldetection.app-mergeDebugResources-48 is not key in sourceSetPathMap.
 		at com.android.ide.common.resources.RelativeResourceUtils$relativeResourcePathToAbsolutePath$1.invoke(RelativeResourceUtils.kt:91)
 		at com.android.ide.common.resources.RelativeResourceUtils$relativeResourcePathToAbsolutePath$1.invoke(RelativeResourceUtils.kt:68)
@@ -316,5 +304,5 @@ error: failed linking file resources.
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 3s
+BUILD FAILED in 10s
 30 actionable tasks: 1 executed, 29 up-to-date
