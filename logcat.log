@@ -1,0 +1,589 @@
+---------------------------- PROCESS STARTED (26197) for package com.tejalabs.falldetection ----------------------------
+--------- beginning of crash
+--------- beginning of system
+2025-05-27 00:15:37.974  3254-3427  PackageMan...ilsExtImpl system_server                        E  Fix up user restrict data of pkg: com.tejalabs.falldetection
+2025-05-27 00:15:38.505  3254-4050  OplusAppQu...Controller system_server                        E  attachExStartingSurface not support issue ar:ActivityRecord{7ae8a11 u0 com.tejalabs.falldetection/.MainActivity t1275} type:2
+2025-05-27 00:15:38.611  3254-3339  OplusThermalStats       system_server                        E  Error getting package info: com.tejalabs.falldetection
+2025-05-27 00:15:38.713 25680-25680 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:15:38.770 25680-25680 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:15:38.829 25680-25680 OplusCusto...ionManager com.tejalabs.falldetection           E  sInstance is null, start a new sInstance
+2025-05-27 00:15:38.858 25680-25680 OplusInputMethodUtil    com.tejalabs.falldetection           D  init sDebug to false, init sDebugIme to false, init sAlwaysOn to false
+2025-05-27 00:15:38.858 25680-25680 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass InputMethodManager.DEBUG = false
+2025-05-27 00:15:38.858 25680-25680 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass ImeFocusController.DEBUG = false
+2025-05-27 00:15:38.858 25680-25680 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass BaseInputConnection.DEBUG = false
+--------- beginning of main
+2025-05-27 00:15:38.869 25680-25680 MainActivity            com.tejalabs.falldetection           D  MainActivity created
+2025-05-27 00:15:38.902  6885-12047 SG::OCSCacheHelper      com.oplus.pantanal.ums               E  checkFromPackageReceiver resolvedInfo is empty,pkg = com.tejalabs.falldetection [UMS.apk|com.oplus.pantanal.ums|1.4.12-3303787]
+2025-05-27 00:15:38.908  6885-12047 SG::OCSCacheHelper      com.oplus.pantanal.ums               E  checkFromPackageReceiver resolvedInfo is empty,pkg = com.tejalabs.falldetection [UMS.apk|com.oplus.pantanal.ums|1.4.12-3303787]
+2025-05-27 00:15:38.948 25680-25680 ContactManager          com.tejalabs.falldetection           D  ContactManager initialized with 0 contacts
+2025-05-27 00:15:38.950 25680-25680 DataLogger              com.tejalabs.falldetection           D  Log directory initialized: /data/user/0/com.tejalabs.falldetection/files/fall_detection_logs
+2025-05-27 00:15:38.952 25680-25680 MainActivity            com.tejalabs.falldetection           D  Requesting 7 permissions
+2025-05-27 00:15:39.000 25680-25721 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 160794467; UID 10359; state: ENABLED
+2025-05-27 00:15:39.047  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 0 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 720
+2025-05-27 00:15:39.047  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 0 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 100
+2025-05-27 00:15:39.050  3254-4193  OplusAppQu...Controller system_server                        E  attachExStartingSurface not support issue ar:ActivityRecord{7ae8a11 u0 com.tejalabs.falldetection/.MainActivity t1275} type:2
+2025-05-27 00:15:39.056 25680-25680 DataLogger              com.tejalabs.falldetection           D  System event logged - Type: APP, Message: MainActivity created
+2025-05-27 00:15:39.057  3254-3339  OplusThermalStats       system_server                        E  Error getting package info: com.tejalabs.falldetection
+2025-05-27 00:15:39.060 25680-25680 ScrollOpti...neManager] com.tejalabs.falldetection           D  updateCurrentActivity: mCurrentActivityName=com.tejalabs.falldetection.MainActivity, isOptEnable=true, isAnimAheadEnable=true, isFrameInsertEnable=true, InsertNum=1, isEnabledForScrollChanged=false
+2025-05-27 00:15:39.060 25680-25680 ActivityThread          com.tejalabs.falldetection           D  ComponentInfo{com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity} checkFinished=false 2
+2025-05-27 00:15:39.060 25680-25680 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:15:39.062 25680-25680 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:15:39.062 25680-25680 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libguiextimpl.so
+2025-05-27 00:15:39.062 25680-25680 nativeloader            com.tejalabs.falldetection           D  Load liboplusgui_jni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
+2025-05-27 00:15:39.066 25680-25680 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 237531167; UID 10359; state: DISABLED
+2025-05-27 00:15:39.068 25680-25680 DynamicFra...igManager] com.tejalabs.falldetection           I  initFrameRateConfig: 
+                                                                                                    	levels: [120, 60]
+                                                                                                    	thresholds: [200]
+                                                                                                    	scrollbar fade frame rate: 0
+2025-05-27 00:15:39.068 25680-25680 DynamicFra...igManager] com.tejalabs.falldetection           I  FRTCConfigManager: FRTC_CAPABILITY = 120, package name = com.tejalabs.falldetection, WINDOW_ANIMATION_SPEED_RATE = 10, SCROLL_ANIMATION_SPEED_RATE = 20, MuitiWindowIdleFramerate = 60, PACKAGE_ENABLE = false
+2025-05-27 00:15:39.068 25680-25680 DynamicFra...ontroller] com.tejalabs.falldetection           I  init info: mPackageName = com.tejalabs.falldetection, mIsEnabled = false
+2025-05-27 00:15:39.068 25680-25680 WindowManager           com.tejalabs.falldetection           D  Add to mViews: DecorView@47cacd4[MainActivity],pkg= com.tejalabs.falldetection
+2025-05-27 00:15:39.069 25680-25743 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:15:39.069 25680-25743 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libhwuiextimpl.so
+2025-05-27 00:15:39.070 25680-25680 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:15:39.070 25680-25680 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
+2025-05-27 00:15:39.077 25680-25680 ViewRootImplExtImpl     com.tejalabs.falldetection           D  onDisplayChanged -1 for VRI android.view.ViewRootImpl@161c240
+2025-05-27 00:15:39.078 25680-25680 libc                    com.tejalabs.falldetection           W  Access denied finding property "ro.vendor.input.resample_latency_time"
+2025-05-27 00:15:39.078 25680-25680 InputEventReceiver      com.tejalabs.falldetection           D  Input log is disabled in InputEventReceiver.
+2025-05-27 00:15:39.079 25680-25680 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+2025-05-27 00:15:39.079 25680-25680 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:15:39.079 25680-25680 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+2025-05-27 00:15:39.080 25680-25680 Choreographer           com.tejalabs.falldetection           I  Skipped 39 frames!  The application may be doing too much work on its main thread.
+2025-05-27 00:15:39.081 25680-25680 OplusBracketLog         com.tejalabs.falldetection           E  [OplusViewMirrorManager] updateHostViewRootIfNeeded, not support android.view.ViewRootImpl@161c240
+2025-05-27 00:15:39.104 25680-25680 ViewRootImplExtImpl     com.tejalabs.falldetection           D  wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=808, relayoutAsync=false, newFlags=52953088, title=com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity
+2025-05-27 00:15:39.110 25680-25680 VRI[MainActivity]       com.tejalabs.falldetection           D  relayoutWindow result, sizeChanged:true, surfaceControlChanged:true, transformHintChanged:true, mSurfaceSize:Point(2120, 3000), mLastSurfaceSize:Point(0, 0), mWidth:-1, mHeight:-1, requestedWidth:2120, requestedHeight:3000, transformHint:7, lastTransformHint:-2147483648, installOrientation:3, displayRotation:0, isSurfaceValid:true, attr.flag:-2122252032, useBlast:true, tmpFrames:ClientWindowFrames{frame=[0,0][2120,3000] display=[0,0][2120,3000] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
+2025-05-27 00:15:39.110 25680-25680 VRI[MainActivity]       com.tejalabs.falldetection           W  updateBlastSurfaceIfNeeded, surfaceSize:Point(2120, 3000), lastSurfaceSize:Point(0, 0), format:-1, blastBufferQueue:null
+2025-05-27 00:15:39.113 25680-25680 BufferQueueConsumer     com.tejalabs.falldetection           D  [](id:645000000000,api:0,p:-1,c:25680) connect: controlledByApp=false
+2025-05-27 00:15:39.114 25680-25680 s.falldetection         com.tejalabs.falldetection           W  Unable to find dolphin functions!
+2025-05-27 00:15:39.118 25680-25743 AdrenoGLES-0            com.tejalabs.falldetection           I  QUALCOMM build                   : 21ec731d58, Ifa39d99f17
+                                                                                                    Build Date                       : 05/31/24
+                                                                                                    OpenGL ES Shader Compiler Version: E031.45.02.13
+                                                                                                    Local Branch                     : 
+                                                                                                    Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.14.3.0.11.00.00.973.576
+                                                                                                    Remote Branch                    : NONE
+                                                                                                    Reconstruct Branch               : NOTHING
+2025-05-27 00:15:39.118 25680-25743 AdrenoGLES-0            com.tejalabs.falldetection           I  Build Config                     : S P 16.1.2 AArch64
+2025-05-27 00:15:39.118 25680-25743 AdrenoGLES-0            com.tejalabs.falldetection           I  Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+2025-05-27 00:15:39.118 25680-25743 AdrenoGLES-0            com.tejalabs.falldetection           I  Driver Version                   : 0762.21
+2025-05-27 00:15:39.118 25680-25743 AdrenoGLES-0            com.tejalabs.falldetection           I  Process Name                     : com.tejalabs.falldetection
+2025-05-27 00:15:39.121 25680-25743 AdrenoGLES-0            com.tejalabs.falldetection           I  PFP: 0x01520175, ME: 0x01520023
+2025-05-27 00:15:39.125 25680-25743 AdrenoUtils             com.tejalabs.falldetection           I  <ReadGpuID:357>: Reading chip ID through GSL
+2025-05-27 00:15:39.129 25680-25743 BufferQueueProducer     com.tejalabs.falldetection           D  [VRI[MainActivity]#0(BLAST Consumer)0](id:645000000000,api:1,p:25680,c:25680) connect: api=1 producerControlledByApp=true
+2025-05-27 00:15:39.129 25680-25743 OpenGLRenderer          com.tejalabs.falldetection           E  Unable to match the desired swap behavior.
+2025-05-27 00:15:39.134 25680-25680 SurfaceControl          com.tejalabs.falldetection           I   setExtendedRangeBrightness sc=Surface(name=com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity)/@0x238ccca,currentBufferRatio=1.0,desiredRatio=1.0
+2025-05-27 00:15:39.143 25680-25680 Quality                 com.tejalabs.falldetection           I  UISlowBinder:144278125
+2025-05-27 00:15:39.172 25680-25743 BLASTBufferQueue        com.tejalabs.falldetection           D  [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=2120x3000 mFrameNumber=1 applyTransaction=true mTimestamp=455818983865792(auto) mPendingTransactions.size=0 graphicBufferId=110294760161285 transform=4
+2025-05-27 00:15:39.172 25680-25743 VRI[MainActivity]       com.tejalabs.falldetection           D  Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true syncBuffer=false
+2025-05-27 00:15:39.173 25680-25680 VRI[MainActivity]       com.tejalabs.falldetection           D  draw finished. seqId=0
+2025-05-27 00:15:39.173 25680-25680 VRI[MainActivity]       com.tejalabs.falldetection           D  reportDrawFinished
+2025-05-27 00:15:39.173 25680-25680 ViewRootImplExtImpl     com.tejalabs.falldetection           D  setMaxDequeuedBufferCount: 2
+2025-05-27 00:15:39.173 25680-25680 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+2025-05-27 00:15:39.174 25680-25680 ScrollOpti...neManager] com.tejalabs.falldetection           D  updateCurrentActivity: mCurrentActivityName=null, isOptEnable=true, isAnimAheadEnable=true, isFrameInsertEnable=true, InsertNum=1, isEnabledForScrollChanged=false
+2025-05-27 00:15:39.186 25680-25680 FallDetectionService    com.tejalabs.falldetection           D  Fall Detection Service created
+2025-05-27 00:15:39.196 25680-25680 SensorDataCollector     com.tejalabs.falldetection           D  SensorDataCollector initialized
+2025-05-27 00:15:39.197 25680-25680 TinyMLProcessor         com.tejalabs.falldetection           W  Model file not found in assets, using fallback
+2025-05-27 00:15:39.198 25680-25680 TinyMLProcessor         com.tejalabs.falldetection           E  Error loading TensorFlow Lite model
+                                                                                                    java.io.FileNotFoundException: fall_detection_model.tflite
+                                                                                                    	at android.content.res.AssetManager.nativeOpenAssetFd(Native Method)
+                                                                                                    	at android.content.res.AssetManager.openFd(AssetManager.java:964)
+                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.loadModelFile(TinyMLProcessor.java:86)
+                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.initializeModel(TinyMLProcessor.java:57)
+                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.<init>(TinyMLProcessor.java:48)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.initializeComponents(FallDetectionService.java:160)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.onCreate(FallDetectionService.java:76)
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5010)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255)
+                                                                                                    	at android.os.Looper.loop(Looper.java:364)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053)
+2025-05-27 00:15:39.198 25680-25680 TinyMLProcessor         com.tejalabs.falldetection           W  Using fallback rule-based fall detection
+2025-05-27 00:15:39.199 25680-25680 ContactManager          com.tejalabs.falldetection           D  ContactManager initialized with 0 contacts
+2025-05-27 00:15:39.205 25680-25680 LocationService         com.tejalabs.falldetection           D  LocationService initialized
+2025-05-27 00:15:39.206 25680-25680 EmergencyManager        com.tejalabs.falldetection           D  EmergencyManager initialized
+2025-05-27 00:15:39.206 25680-25680 FallDetectionService    com.tejalabs.falldetection           D  Service components initialized
+2025-05-27 00:15:39.223 25680-25680 AndroidRuntime          com.tejalabs.falldetection           D  Shutting down VM
+2025-05-27 00:15:39.224 25680-25680 AndroidRuntime          com.tejalabs.falldetection           E  FATAL EXCEPTION: main
+                                                                                                    Process: com.tejalabs.falldetection, PID: 25680
+                                                                                                    java.lang.RuntimeException: Unable to create service com.tejalabs.falldetection.services.FallDetectionService: java.lang.SecurityException: com.tejalabs.falldetection: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5035)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255)
+                                                                                                    	at android.os.Looper.loop(Looper.java:364)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053)
+                                                                                                    Caused by: java.lang.SecurityException: com.tejalabs.falldetection: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+                                                                                                    	at android.os.Parcel.createExceptionOrNull(Parcel.java:3087)
+                                                                                                    	at android.os.Parcel.createException(Parcel.java:3071)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:3054)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:2996)
+                                                                                                    	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:5684)
+                                                                                                    	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:1868)
+                                                                                                    	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1804)
+                                                                                                    	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1792)
+                                                                                                    	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:765)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.registerReceivers(FallDetectionService.java:183)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.onCreate(FallDetectionService.java:79)
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5010)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106) 
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:364) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053) 
+                                                                                                    Caused by: android.os.RemoteException: Remote stack trace:
+                                                                                                    	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(ActivityManagerService.java:15038)
+                                                                                                    	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:2570)
+                                                                                                    	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:3039)
+                                                                                                    	at android.os.Binder.execTransactInternal(Binder.java:1357)
+                                                                                                    	at android.os.Binder.execTransact(Binder.java:1288)
+2025-05-27 00:15:39.242 25680-25680 Process                 com.tejalabs.falldetection           I  Sending signal. PID: 25680 SIG: 9
+2025-05-27 00:15:39.319  1872-1872  qspmHal                 vendor.qti.qspmhal-service           E  setAppInfoH atPid = 25680, gpuFname:com.tejalabs.falldetection, gpuFver:10
+2025-05-27 00:15:40.242  6927-26046 AF.SDK.XmlReader        com.heytap.accessory                 E  No meta data found with key: AccessoryServicesLocation in com.tejalabs.falldetection
+2025-05-27 00:15:40.245  6885-12047 SG::OCSCacheHelper      com.oplus.pantanal.ums               E  checkFromPackageReceiver resolvedInfo is empty,pkg = com.tejalabs.falldetection [UMS.apk|com.oplus.pantanal.ums|1.4.12-3303787]
+2025-05-27 00:16:07.697  3254-6963  OplusAppQu...Controller system_server                        E  attachExStartingSurface not support issue ar:ActivityRecord{fdcfb63 u0 com.tejalabs.falldetection/.MainActivity t1277} type:2
+2025-05-27 00:16:07.699  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 1 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 2000
+2025-05-27 00:16:07.707  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 1 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 2000
+2025-05-27 00:16:07.708  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 1 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 2000
+2025-05-27 00:16:07.730  1872-1872  qspmHal                 vendor.qti.qspmhal-service           E  setAppInfoH atPid = 26197, gpuFname:com.tejalabs.falldetection, gpuFver:11
+2025-05-27 00:16:07.737 26197-26197 s.falldetection         com.tejalabs.falldetection           I  Late-enabling -Xcheck:jni
+2025-05-27 00:16:07.743  4417-4417  UAH_JNI                 com.android.launcher                 E  uah_event_acquire ! cmdId: 85 ,strPkg: com.tejalabs.falldetection, strIdent: GpuBoost, timeout: 1000
+2025-05-27 00:16:07.761 26197-26197 s.falldetection         com.tejalabs.falldetection           E  Unknown bits set in runtime_flags: 0x40000000
+2025-05-27 00:16:07.762 26197-26197 s.falldetection         com.tejalabs.falldetection           I  Using CollectorTypeCMC GC.
+2025-05-27 00:16:07.767 26197-26197 nativeloader            com.tejalabs.falldetection           D  Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+2025-05-27 00:16:07.770 26197-26197 OplusActiv...eadExtImpl com.tejalabs.falldetection           D  java.lang.NoSuchMethodException: dalvik.system.VMRuntime.SupressionGC [int, int]
+2025-05-27 00:16:07.770 26197-26197 libc                    com.tejalabs.falldetection           W  Access denied finding property "persist.vendor.sys.activitylog"
+2025-05-27 00:16:07.770 26197-26197 OneTrace                com.tejalabs.falldetection           I  Mark active for pid=26197? true
+2025-05-27 00:16:07.770 26197-26197 cutils-dev              com.tejalabs.falldetection           D  otrace_set_tracing_enabled? true tag:0
+2025-05-27 00:16:07.770 26197-26202 cutils-dev              com.tejalabs.falldetection           D  properties changed in otrace_seq_number_changed!
+2025-05-27 00:16:07.779  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 0 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 720
+2025-05-27 00:16:07.783 26197-26197 OplusActivityManager    com.tejalabs.falldetection           D  get AMS extension: android.os.BinderProxy@9946ca8
+2025-05-27 00:16:07.786 26197-26208 OplusAppHeapManager     com.tejalabs.falldetection           D  java.lang.NoSuchMethodException: dalvik.system.VMRuntime.updateProcessValue [int, int, int]
+2025-05-27 00:16:07.787 26197-26208 CompatibilityInfo       com.tejalabs.falldetection           D  setOverrideInvertedScale  1.0 to 1.0
+2025-05-27 00:16:07.788  3254-3339  OplusThermalStats       system_server                        E  Error getting package info: com.tejalabs.falldetection
+2025-05-27 00:16:07.788 26197-26197 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+2025-05-27 00:16:07.789 26197-26197 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 171979766; UID 10359; state: ENABLED
+2025-05-27 00:16:07.790 26197-26197 CompactWindowAppManager com.tejalabs.falldetection           D  initCompactApplicationInfo CompactMode: , NormalMode: 
+2025-05-27 00:16:07.792 26197-26197 OplusScrollToTopManager com.tejalabs.falldetection           D  setIsInWhiteList false
+2025-05-27 00:16:07.792 26197-26197 OplusViewDebugManager   com.tejalabs.falldetection           D  OplusViewDebugManager Constructor android.view.debug.OplusViewDebugManager@d69b766 [mHasViewDebugProperty true] [mHasMsgDebugProperty false] [DEBUG false] [EXTRAINFOENABLE false] [LIGHT_OS false]
+2025-05-27 00:16:07.793 26197-26197 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 242716250; UID 10359; state: ENABLED
+2025-05-27 00:16:07.796 26197-26197 libc                    com.tejalabs.falldetection           W  Access denied finding property "ro.odm.prev.product.name"
+2025-05-27 00:16:07.799 26197-26197 nativeloader            com.tejalabs.falldetection           D  Configuring clns-6 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/lib/arm64:/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.tejalabs.falldetection
+2025-05-27 00:16:07.799 26197-26197 nativeloader            com.tejalabs.falldetection           D  Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libQOC.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libAPSClient-cmd-jni-extension.oplus.so:libsatellite_audio_jni.oplus.so:libortc_so.oplus.so:libsoundtouch.oplus.so:libsoundtouch_jni.oplus.so:libupdateprof.qti.so:libthermalclient.qti.so:libQOC.qti.so:libqape.qti.so:libqesdk_ndk_platform.qti.so:liblistenjni.qti.so
+2025-05-27 00:16:07.799 26197-26197 ApplicationLoaders      com.tejalabs.falldetection           D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+2025-05-27 00:16:07.799 26197-26197 ApplicationLoaders      com.tejalabs.falldetection           D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+2025-05-27 00:16:07.799 26197-26197 ziparchive              com.tejalabs.falldetection           W  Unable to open '/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.dm': No such file or directory
+2025-05-27 00:16:07.799 26197-26197 ziparchive              com.tejalabs.falldetection           W  Unable to open '/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.dm': No such file or directory
+2025-05-27 00:16:07.871 26197-26197 nativeloader            com.tejalabs.falldetection           D  Configuring clns-7 for other apk /data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/lib/arm64:/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.tejalabs.falldetection
+2025-05-27 00:16:07.875 26197-26197 nativeloader            com.tejalabs.falldetection           D  Load libframework-connectivity-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity.jar: ok
+2025-05-27 00:16:07.878 26197-26197 GraphicsEnvironment     com.tejalabs.falldetection           V  Currently set values for:
+2025-05-27 00:16:07.878 26197-26197 GraphicsEnvironment     com.tejalabs.falldetection           V    angle_gl_driver_selection_pkgs=[""]
+2025-05-27 00:16:07.878 26197-26197 GraphicsEnvironment     com.tejalabs.falldetection           V    angle_gl_driver_selection_values=[""]
+2025-05-27 00:16:07.878 26197-26197 GraphicsEnvironment     com.tejalabs.falldetection           V  ANGLE GameManagerService for com.tejalabs.falldetection: false
+2025-05-27 00:16:07.878 26197-26197 GraphicsEnvironment     com.tejalabs.falldetection           V  com.tejalabs.falldetection is not listed in per-application setting
+2025-05-27 00:16:07.878 26197-26197 GraphicsEnvironment     com.tejalabs.falldetection           V  Updatable production driver is not supported on the device.
+2025-05-27 00:16:07.880 26197-26197 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:16:07.886 26197-26197 WM-WrkMgrInitializer    com.tejalabs.falldetection           D  Initializing WorkManager with default configuration.
+2025-05-27 00:16:07.898 26197-26197 WM-PackageManagerHelper com.tejalabs.falldetection           D  Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+2025-05-27 00:16:07.898 26197-26197 WM-Schedulers           com.tejalabs.falldetection           D  Created SystemJobScheduler and enabled SystemJobService
+2025-05-27 00:16:07.901 26197-26197 nativeloader            com.tejalabs.falldetection           D  Load libSchedAssistJni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
+2025-05-27 00:16:07.901 26197-26197 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:16:07.901 26197-26197 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
+2025-05-27 00:16:07.901 26197-26197 SchedAssist             com.tejalabs.falldetection           E  sysOpen failed with error=Permission denied
+2025-05-27 00:16:07.901 26197-26197 SchedAssist             com.tejalabs.falldetection           E  open sharedFd failed with error=Permission denied
+2025-05-27 00:16:07.901 26197-26197 SchedAssist             com.tejalabs.falldetection           E  open sharedFd failed with error=Permission denied
+2025-05-27 00:16:07.901 26197-26197 SchedAssist             com.tejalabs.falldetection           E  open sharedFd failed with error=Permission denied
+2025-05-27 00:16:07.903 26197-26197 OplusGraphicsEvent      com.tejalabs.falldetection           D  OplusGraphicsEventListener create now!
+2025-05-27 00:16:07.904 26197-26197 OplusGraphicsEvent      com.tejalabs.falldetection           D  addEventListener success!
+2025-05-27 00:16:07.905  3254-4406  ScrollOpti...rfService] system_server                        E  isScrollOptimEnable: pkgName = com.tejalabs.falldetection, output = Bundle[{pre_anim_enable=true, frame_insert_list=null, frame_insert_default_num=1, scroll_changed_enable_list=null}]
+2025-05-27 00:16:07.905 26197-26197 ScrollOpti...igManager] com.tejalabs.falldetection           D  initOptConfig: pkg= com.tejalabs.falldetection, mOptEnable= true, mAnimAheadEnable= true, mInsertDefaultNum= 1, mFrameInsertEnableList= {}, mSCEnableList= []
+2025-05-27 00:16:07.907 26197-26197 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+2025-05-27 00:16:07.908 26197-26197 OpenGLRenderer          com.tejalabs.falldetection           I  SupportApps size 0
+2025-05-27 00:16:07.911 26197-26220 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:16:07.911 26197-26220 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
+2025-05-27 00:16:07.912 26197-26197 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:16:07.916 26197-26222 colorx                  com.tejalabs.falldetection           D  Successfully found ColorX_Check .
+2025-05-27 00:16:07.917 26197-26222 colorx                  com.tejalabs.falldetection           D  Not available for this game.
+2025-05-27 00:16:07.920 26197-26215 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 160794467; UID 10359; state: ENABLED
+2025-05-27 00:16:07.922 26197-26197 AppCompatDelegate       com.tejalabs.falldetection           D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2025-05-27 00:16:07.933 26197-26197 oplus.andr...actoryImpl com.tejalabs.falldetection           I  Unknow feature:IOplusTextViewRTLUtilForUG
+2025-05-27 00:16:07.934 26197-26197 nativeloader            com.tejalabs.falldetection           D  Load liboplushwui_jni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
+2025-05-27 00:16:07.946 26197-26197 s.falldetection         com.tejalabs.falldetection           W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+2025-05-27 00:16:07.947 26197-26197 ScrollOpti...tionHelper com.tejalabs.falldetection           D  can't find the config file for optimizaiton
+2025-05-27 00:16:07.947 26197-26197 ScrollOpti...tionHelper com.tejalabs.falldetection           D  will not debug for debug is false
+2025-05-27 00:16:07.947 26197-26197 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 171228096; UID 10359; state: ENABLED
+2025-05-27 00:16:07.947 26197-26197 oplus.andr...actoryImpl com.tejalabs.falldetection           I  get feature:IOplusDynamicVsyncFeature
+2025-05-27 00:16:07.948 26197-26197 oplus.andr...actoryImpl com.tejalabs.falldetection           I  get feature:IOplusDynamicVsyncFeature
+2025-05-27 00:16:07.948 26197-26197 oplus.andr...actoryImpl com.tejalabs.falldetection           I  get feature:IOplusDynamicVsyncFeature
+2025-05-27 00:16:07.950 26197-26197 OplusOverS...lerExtImpl com.tejalabs.falldetection           D  Success to read Oplus Scroll Rus list, com.tejalabs.falldetection is enabled? false
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MIN_VELOCITY_ADJUST_FRICTION 1000.0
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MIN_VELOCITY_ADJUST_FRICTION 1000.0
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MID_VELOCITY_ADJUST_FRICTION 4000.0
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MID_VELOCITY_ADJUST_FRICTION 4000.0
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MAX_VELOCITY_ADJUST_FRICTION 10000.0
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MAX_VELOCITY_ADJUST_FRICTION 10000.0
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  android.widget.OplusSpringOverScroller@69d7981 set OPLUS_FLING_FRICTION_NORMAL 0.12
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MID_FLING_BASE_FRICTION 2.5
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MID_FLING_BASE_FRICTION 2.5
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set SLOW_FLING_BASE_FRICTION 2.5
+2025-05-27 00:16:07.950 26197-26197 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set SLOW_FLING_BASE_FRICTION 2.5
+2025-05-27 00:16:07.952 26197-26197 OplusCusto...ionManager com.tejalabs.falldetection           E  sInstance is null, start a new sInstance
+2025-05-27 00:16:07.953 26197-26197 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 210923482; UID 10359; state: ENABLED
+2025-05-27 00:16:07.976 26197-26197 OplusInputMethodUtil    com.tejalabs.falldetection           D  init sDebug to false, init sDebugIme to false, init sAlwaysOn to false
+2025-05-27 00:16:07.976 26197-26197 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass InputMethodManager.DEBUG = false
+2025-05-27 00:16:07.976 26197-26197 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass ImeFocusController.DEBUG = false
+2025-05-27 00:16:07.976 26197-26197 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass BaseInputConnection.DEBUG = false
+2025-05-27 00:16:07.981 26197-26197 MainActivity            com.tejalabs.falldetection           D  MainActivity created
+2025-05-27 00:16:07.988 26197-26197 ContactManager          com.tejalabs.falldetection           D  ContactManager initialized with 0 contacts
+2025-05-27 00:16:07.990 26197-26197 DataLogger              com.tejalabs.falldetection           D  Log directory initialized: /data/user/0/com.tejalabs.falldetection/files/fall_detection_logs
+2025-05-27 00:16:07.992 26197-26197 MainActivity            com.tejalabs.falldetection           D  All permissions granted
+2025-05-27 00:16:07.994 26197-26197 DataLogger              com.tejalabs.falldetection           D  System event logged - Type: APP, Message: MainActivity created
+2025-05-27 00:16:07.998 26197-26197 ScrollOpti...neManager] com.tejalabs.falldetection           D  updateCurrentActivity: mCurrentActivityName=com.tejalabs.falldetection.MainActivity, isOptEnable=true, isAnimAheadEnable=true, isFrameInsertEnable=true, InsertNum=1, isEnabledForScrollChanged=false
+2025-05-27 00:16:07.998 26197-26197 ActivityThread          com.tejalabs.falldetection           D  ComponentInfo{com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity} checkFinished=false 2
+2025-05-27 00:16:07.998 26197-26197 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:16:08.000 26197-26197 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:16:08.001 26197-26197 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libguiextimpl.so
+2025-05-27 00:16:08.001 26197-26197 nativeloader            com.tejalabs.falldetection           D  Load liboplusgui_jni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
+2025-05-27 00:16:08.003 26197-26197 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 237531167; UID 10359; state: DISABLED
+2025-05-27 00:16:08.004 26197-26197 DynamicFra...igManager] com.tejalabs.falldetection           I  initFrameRateConfig: 
+                                                                                                    	levels: [120, 60]
+                                                                                                    	thresholds: [200]
+                                                                                                    	scrollbar fade frame rate: 0
+2025-05-27 00:16:08.004 26197-26197 DynamicFra...igManager] com.tejalabs.falldetection           I  FRTCConfigManager: FRTC_CAPABILITY = 120, package name = com.tejalabs.falldetection, WINDOW_ANIMATION_SPEED_RATE = 10, SCROLL_ANIMATION_SPEED_RATE = 20, MuitiWindowIdleFramerate = 60, PACKAGE_ENABLE = false
+2025-05-27 00:16:08.004 26197-26197 DynamicFra...ontroller] com.tejalabs.falldetection           I  init info: mPackageName = com.tejalabs.falldetection, mIsEnabled = false
+2025-05-27 00:16:08.004 26197-26197 WindowManager           com.tejalabs.falldetection           D  Add to mViews: DecorView@1827227[MainActivity],pkg= com.tejalabs.falldetection
+2025-05-27 00:16:08.005 26197-26220 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:16:08.006 26197-26220 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libhwuiextimpl.so
+2025-05-27 00:16:08.006 26197-26197 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:16:08.006 26197-26197 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
+2025-05-27 00:16:08.013 26197-26197 ViewRootImplExtImpl     com.tejalabs.falldetection           D  onDisplayChanged -1 for VRI android.view.ViewRootImpl@59a09c3
+2025-05-27 00:16:08.013 26197-26197 libc                    com.tejalabs.falldetection           W  Access denied finding property "ro.vendor.input.resample_latency_time"
+2025-05-27 00:16:08.014 26197-26197 InputEventReceiver      com.tejalabs.falldetection           D  Input log is disabled in InputEventReceiver.
+2025-05-27 00:16:08.014 26197-26197 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+2025-05-27 00:16:08.014 26197-26197 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:16:08.015 26197-26197 Quality                 com.tejalabs.falldetection           I  Skipped: false 2 cost 17.242136 refreshRate 8333457 bit true processName com.tejalabs.falldetection
+2025-05-27 00:16:08.016 26197-26197 OplusBracketLog         com.tejalabs.falldetection           E  [OplusViewMirrorManager] updateHostViewRootIfNeeded, not support android.view.ViewRootImpl@59a09c3
+2025-05-27 00:16:08.025 26197-26197 ViewRootImplExtImpl     com.tejalabs.falldetection           D  wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=808, relayoutAsync=false, newFlags=52953088, title=com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity
+2025-05-27 00:16:08.030 26197-26197 VRI[MainActivity]       com.tejalabs.falldetection           D  relayoutWindow result, sizeChanged:true, surfaceControlChanged:true, transformHintChanged:true, mSurfaceSize:Point(2120, 3000), mLastSurfaceSize:Point(0, 0), mWidth:-1, mHeight:-1, requestedWidth:2120, requestedHeight:3000, transformHint:7, lastTransformHint:-2147483648, installOrientation:3, displayRotation:0, isSurfaceValid:true, attr.flag:-2122252032, useBlast:true, tmpFrames:ClientWindowFrames{frame=[0,0][2120,3000] display=[0,0][2120,3000] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
+2025-05-27 00:16:08.031 26197-26197 VRI[MainActivity]       com.tejalabs.falldetection           W  updateBlastSurfaceIfNeeded, surfaceSize:Point(2120, 3000), lastSurfaceSize:Point(0, 0), format:-1, blastBufferQueue:null
+2025-05-27 00:16:08.033 26197-26197 BufferQueueConsumer     com.tejalabs.falldetection           D  [](id:665500000000,api:0,p:-1,c:26197) connect: controlledByApp=false
+2025-05-27 00:16:08.033 26197-26197 s.falldetection         com.tejalabs.falldetection           W  Unable to find dolphin functions!
+2025-05-27 00:16:08.036 26197-26220 AdrenoGLES-0            com.tejalabs.falldetection           I  QUALCOMM build                   : 21ec731d58, Ifa39d99f17
+                                                                                                    Build Date                       : 05/31/24
+                                                                                                    OpenGL ES Shader Compiler Version: E031.45.02.13
+                                                                                                    Local Branch                     : 
+                                                                                                    Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.14.3.0.11.00.00.973.576
+                                                                                                    Remote Branch                    : NONE
+                                                                                                    Reconstruct Branch               : NOTHING
+2025-05-27 00:16:08.036 26197-26220 AdrenoGLES-0            com.tejalabs.falldetection           I  Build Config                     : S P 16.1.2 AArch64
+2025-05-27 00:16:08.036 26197-26220 AdrenoGLES-0            com.tejalabs.falldetection           I  Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+2025-05-27 00:16:08.036 26197-26220 AdrenoGLES-0            com.tejalabs.falldetection           I  Driver Version                   : 0762.21
+2025-05-27 00:16:08.036 26197-26220 AdrenoGLES-0            com.tejalabs.falldetection           I  Process Name                     : com.tejalabs.falldetection
+2025-05-27 00:16:08.039 26197-26220 AdrenoGLES-0            com.tejalabs.falldetection           I  PFP: 0x01520175, ME: 0x01520023
+2025-05-27 00:16:08.042 26197-26220 AdrenoUtils             com.tejalabs.falldetection           I  <ReadGpuID:357>: Reading chip ID through GSL
+2025-05-27 00:16:08.046 26197-26220 BufferQueueProducer     com.tejalabs.falldetection           D  [VRI[MainActivity]#0(BLAST Consumer)0](id:665500000000,api:1,p:26197,c:26197) connect: api=1 producerControlledByApp=true
+2025-05-27 00:16:08.046 26197-26220 OpenGLRenderer          com.tejalabs.falldetection           E  Unable to match the desired swap behavior.
+2025-05-27 00:16:08.046 26197-26197 SurfaceControl          com.tejalabs.falldetection           I   setExtendedRangeBrightness sc=Surface(name=com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity)/@0xad7e035,currentBufferRatio=1.0,desiredRatio=1.0
+2025-05-27 00:16:08.097 26197-26220 BLASTBufferQueue        com.tejalabs.falldetection           D  [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=2120x3000 mFrameNumber=1 applyTransaction=true mTimestamp=455847908875521(auto) mPendingTransactions.size=0 graphicBufferId=112515258253317 transform=4
+2025-05-27 00:16:08.097 26197-26220 VRI[MainActivity]       com.tejalabs.falldetection           D  Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true syncBuffer=false
+2025-05-27 00:16:08.098 26197-26197 VRI[MainActivity]       com.tejalabs.falldetection           D  draw finished. seqId=0
+2025-05-27 00:16:08.098 26197-26197 VRI[MainActivity]       com.tejalabs.falldetection           D  reportDrawFinished
+2025-05-27 00:16:08.098 26197-26197 ViewRootImplExtImpl     com.tejalabs.falldetection           D  setMaxDequeuedBufferCount: 2
+2025-05-27 00:16:08.099 26197-26197 FallDetectionService    com.tejalabs.falldetection           D  Fall Detection Service created
+2025-05-27 00:16:08.107  1831-6456  ANDR-PERF-LM            ven...ti.hardware.perf2-hal-service  E  PrefAppsDB: get_total_pkg_bindapp_count() 663: App = (com.tejalabs.falldetection) not found in LatData DB.
+2025-05-27 00:16:08.108 26197-26197 SensorDataCollector     com.tejalabs.falldetection           D  SensorDataCollector initialized
+2025-05-27 00:16:08.109 26197-26197 TinyMLProcessor         com.tejalabs.falldetection           W  Model file not found in assets, using fallback
+2025-05-27 00:16:08.109 26197-26197 TinyMLProcessor         com.tejalabs.falldetection           E  Error loading TensorFlow Lite model
+                                                                                                    java.io.FileNotFoundException: fall_detection_model.tflite
+                                                                                                    	at android.content.res.AssetManager.nativeOpenAssetFd(Native Method)
+                                                                                                    	at android.content.res.AssetManager.openFd(AssetManager.java:964)
+                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.loadModelFile(TinyMLProcessor.java:86)
+                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.initializeModel(TinyMLProcessor.java:57)
+                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.<init>(TinyMLProcessor.java:48)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.initializeComponents(FallDetectionService.java:160)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.onCreate(FallDetectionService.java:76)
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5010)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255)
+                                                                                                    	at android.os.Looper.loop(Looper.java:364)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053)
+2025-05-27 00:16:08.109 26197-26197 TinyMLProcessor         com.tejalabs.falldetection           W  Using fallback rule-based fall detection
+2025-05-27 00:16:08.111 26197-26197 ContactManager          com.tejalabs.falldetection           D  ContactManager initialized with 0 contacts
+2025-05-27 00:16:08.117 26197-26197 LocationService         com.tejalabs.falldetection           D  LocationService initialized
+2025-05-27 00:16:08.117 26197-26197 EmergencyManager        com.tejalabs.falldetection           D  EmergencyManager initialized
+2025-05-27 00:16:08.117 26197-26197 FallDetectionService    com.tejalabs.falldetection           D  Service components initialized
+2025-05-27 00:16:08.119 26197-26197 AndroidRuntime          com.tejalabs.falldetection           D  Shutting down VM
+2025-05-27 00:16:08.120 26197-26197 AndroidRuntime          com.tejalabs.falldetection           E  FATAL EXCEPTION: main
+                                                                                                    Process: com.tejalabs.falldetection, PID: 26197
+                                                                                                    java.lang.RuntimeException: Unable to create service com.tejalabs.falldetection.services.FallDetectionService: java.lang.SecurityException: com.tejalabs.falldetection: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5035)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255)
+                                                                                                    	at android.os.Looper.loop(Looper.java:364)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053)
+                                                                                                    Caused by: java.lang.SecurityException: com.tejalabs.falldetection: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+                                                                                                    	at android.os.Parcel.createExceptionOrNull(Parcel.java:3087)
+                                                                                                    	at android.os.Parcel.createException(Parcel.java:3071)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:3054)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:2996)
+                                                                                                    	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:5684)
+                                                                                                    	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:1868)
+                                                                                                    	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1804)
+                                                                                                    	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1792)
+                                                                                                    	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:765)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.registerReceivers(FallDetectionService.java:183)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.onCreate(FallDetectionService.java:79)
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5010)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106) 
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:364) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053) 
+                                                                                                    Caused by: android.os.RemoteException: Remote stack trace:
+                                                                                                    	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(ActivityManagerService.java:15038)
+                                                                                                    	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:2570)
+                                                                                                    	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:3039)
+                                                                                                    	at android.os.Binder.execTransactInternal(Binder.java:1357)
+                                                                                                    	at android.os.Binder.execTransact(Binder.java:1288)
+2025-05-27 00:16:08.126  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 0 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 720
+2025-05-27 00:16:08.627 26197-26202 s.falldetection         com.tejalabs.falldetection           I  Compiler allocated 6482KB to compile void android.view.ViewRootImpl.performTraversals()
+2025-05-27 00:16:09.381 26197-26207 VRI[MainActivity]       com.tejalabs.falldetection           D  dispatchAppVisibility visible:false
+2025-05-27 00:16:11.108 26197-26218 Quality                 com.tejalabs.falldetection           I  stackInfo :----- pid 26197 at 2025-05-27 00:16:11.100 -----;Cmd line: com.tejalabs.falldetection;"main" prio=5 tid=2 RUNNABLE sysTid=26197;  at android.os.BinderProxy.transactNative(Native Method);  at android.os.BinderProxy.transact(BinderProxy.java:677);  at android.app.IActivityManager$Stub$Proxy.handleApplicationCrash(IActivityManager.java:5544);  at com.android.internal.os.RuntimeInit$KillApplicationHandler.uncaughtException(RuntimeInit.java:175);  at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1071);  at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1066);  at com.android.internal.os.RuntimeInitExtImpl.uncaughtExceptionExt(RuntimeInitExtImpl.java:68);  at com.android.internal.os.RuntimeInit$LoggingHandler.uncaughtException(RuntimeInit.java:128);  at java.lang.Thread.dispatchUncaughtException(Thread.java:2300);
+2025-05-27 00:16:13.144 26197-26199 s.falldetection         com.tejalabs.falldetection           I  Thread[2,tid=26199,WaitingInMainSignalCatcherLoop,Thread*=0xb4000074e0983c00,peer=0x14c20020,"Signal Catcher"]: reacting to signal 3
+2025-05-27 00:16:13.144 26197-26199 s.falldetection         com.tejalabs.falldetection           I  
+2025-05-27 00:16:13.328 26197-26199 s.falldetection         com.tejalabs.falldetection           I  Wrote stack traces to tombstoned
+2025-05-27 00:16:14.118 26197-26218 Quality                 com.tejalabs.falldetection           I  stackInfo :----- pid 26197 at 2025-05-27 00:16:14.110 -----;Cmd line: com.tejalabs.falldetection;"main" prio=5 tid=2 RUNNABLE sysTid=26197;  at android.os.BinderProxy.transactNative(Native Method);  at android.os.BinderProxy.transact(BinderProxy.java:677);  at android.app.IActivityManager$Stub$Proxy.handleApplicationCrash(IActivityManager.java:5544);  at com.android.internal.os.RuntimeInit$KillApplicationHandler.uncaughtException(RuntimeInit.java:175);  at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1071);  at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1066);  at com.android.internal.os.RuntimeInitExtImpl.uncaughtExceptionExt(RuntimeInitExtImpl.java:68);  at com.android.internal.os.RuntimeInit$LoggingHandler.uncaughtException(RuntimeInit.java:128);  at java.lang.Thread.dispatchUncaughtException(Thread.java:2300);
+2025-05-27 00:16:39.422 26197-26199 s.falldetection         com.tejalabs.falldetection           I  Thread[2,tid=26199,WaitingInMainSignalCatcherLoop,Thread*=0xb4000074e0983c00,peer=0x14000e18,"Signal Catcher"]: reacting to signal 3
+2025-05-27 00:16:39.423 26197-26199 s.falldetection         com.tejalabs.falldetection           I  
+2025-05-27 00:16:39.543 26197-26199 s.falldetection         com.tejalabs.falldetection           I  Wrote stack traces to tombstoned
+2025-05-27 00:17:34.068  1872-1872  qspmHal                 vendor.qti.qspmhal-service           E  setAppInfoH atPid = 26197, gpuFname:com.tejalabs.falldetection, gpuFver:10
+---------------------------- PROCESS ENDED (26197) for package com.tejalabs.falldetection ----------------------------
+2025-05-27 00:17:34.620  3254-14425 OplusAppQu...Controller system_server                        E  attachExStartingSurface not support issue ar:ActivityRecord{d7fe8c u0 com.tejalabs.falldetection/.MainActivity t1278} type:2
+2025-05-27 00:17:34.622  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 1 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 2000
+2025-05-27 00:17:34.632  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 1 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 2000
+2025-05-27 00:17:34.632  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 1 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 2000
+2025-05-27 00:17:34.652  1872-1872  qspmHal                 vendor.qti.qspmhal-service           E  setAppInfoH atPid = 26675, gpuFname:com.tejalabs.falldetection, gpuFver:11
+2025-05-27 00:17:34.657  4417-4417  UAH_JNI                 com.android.launcher                 E  uah_event_acquire ! cmdId: 85 ,strPkg: com.tejalabs.falldetection, strIdent: GpuBoost, timeout: 1000
+2025-05-27 00:17:34.695  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 0 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 720
+2025-05-27 00:17:34.699  3254-3339  OplusThermalStats       system_server                        E  Error getting package info: com.tejalabs.falldetection
+---------------------------- PROCESS STARTED (26675) for package com.tejalabs.falldetection ----------------------------
+2025-05-27 00:17:34.715 26675-26675 nativeloader            com.tejalabs.falldetection           D  Configuring clns-6 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/lib/arm64:/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.tejalabs.falldetection
+2025-05-27 00:17:34.715 26675-26675 nativeloader            com.tejalabs.falldetection           D  Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libQOC.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libAPSClient-cmd-jni-extension.oplus.so:libsatellite_audio_jni.oplus.so:libortc_so.oplus.so:libsoundtouch.oplus.so:libsoundtouch_jni.oplus.so:libupdateprof.qti.so:libthermalclient.qti.so:libQOC.qti.so:libqape.qti.so:libqesdk_ndk_platform.qti.so:liblistenjni.qti.so
+2025-05-27 00:17:34.715 26675-26675 ApplicationLoaders      com.tejalabs.falldetection           D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+2025-05-27 00:17:34.715 26675-26675 ApplicationLoaders      com.tejalabs.falldetection           D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+2025-05-27 00:17:34.715 26675-26675 ziparchive              com.tejalabs.falldetection           W  Unable to open '/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.dm': No such file or directory
+2025-05-27 00:17:34.715 26675-26675 ziparchive              com.tejalabs.falldetection           W  Unable to open '/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.dm': No such file or directory
+2025-05-27 00:17:34.786 26675-26675 nativeloader            com.tejalabs.falldetection           D  Configuring clns-7 for other apk /data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/lib/arm64:/data/app/~~COdB_i26uytvfXmJdJAhFw==/com.tejalabs.falldetection-Zq2kGYR0LkARRgGkw7CoJg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.tejalabs.falldetection
+2025-05-27 00:17:34.790 26675-26675 nativeloader            com.tejalabs.falldetection           D  Load libframework-connectivity-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity.jar: ok
+2025-05-27 00:17:34.793 26675-26675 GraphicsEnvironment     com.tejalabs.falldetection           V  Currently set values for:
+2025-05-27 00:17:34.793 26675-26675 GraphicsEnvironment     com.tejalabs.falldetection           V    angle_gl_driver_selection_pkgs=[""]
+2025-05-27 00:17:34.793 26675-26675 GraphicsEnvironment     com.tejalabs.falldetection           V    angle_gl_driver_selection_values=[""]
+2025-05-27 00:17:34.793 26675-26675 GraphicsEnvironment     com.tejalabs.falldetection           V  ANGLE GameManagerService for com.tejalabs.falldetection: false
+2025-05-27 00:17:34.793 26675-26675 GraphicsEnvironment     com.tejalabs.falldetection           V  com.tejalabs.falldetection is not listed in per-application setting
+2025-05-27 00:17:34.793 26675-26675 GraphicsEnvironment     com.tejalabs.falldetection           V  Updatable production driver is not supported on the device.
+2025-05-27 00:17:34.796 26675-26675 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:17:34.802 26675-26675 WM-WrkMgrInitializer    com.tejalabs.falldetection           D  Initializing WorkManager with default configuration.
+2025-05-27 00:17:34.814 26675-26675 WM-PackageManagerHelper com.tejalabs.falldetection           D  Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+2025-05-27 00:17:34.814 26675-26675 WM-Schedulers           com.tejalabs.falldetection           D  Created SystemJobScheduler and enabled SystemJobService
+2025-05-27 00:17:34.817 26675-26675 nativeloader            com.tejalabs.falldetection           D  Load libSchedAssistJni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
+2025-05-27 00:17:34.817 26675-26675 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:17:34.818 26675-26675 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
+2025-05-27 00:17:34.818 26675-26675 SchedAssist             com.tejalabs.falldetection           E  sysOpen failed with error=Permission denied
+2025-05-27 00:17:34.818 26675-26675 SchedAssist             com.tejalabs.falldetection           E  open sharedFd failed with error=Permission denied
+2025-05-27 00:17:34.818 26675-26675 SchedAssist             com.tejalabs.falldetection           E  open sharedFd failed with error=Permission denied
+2025-05-27 00:17:34.818 26675-26675 SchedAssist             com.tejalabs.falldetection           E  open sharedFd failed with error=Permission denied
+2025-05-27 00:17:34.820 26675-26675 OplusGraphicsEvent      com.tejalabs.falldetection           D  OplusGraphicsEventListener create now!
+2025-05-27 00:17:34.820 26675-26675 OplusGraphicsEvent      com.tejalabs.falldetection           D  addEventListener success!
+2025-05-27 00:17:34.821  3254-14425 ScrollOpti...rfService] system_server                        E  isScrollOptimEnable: pkgName = com.tejalabs.falldetection, output = Bundle[{pre_anim_enable=true, frame_insert_list=null, frame_insert_default_num=1, scroll_changed_enable_list=null}]
+2025-05-27 00:17:34.821 26675-26675 ScrollOpti...igManager] com.tejalabs.falldetection           D  initOptConfig: pkg= com.tejalabs.falldetection, mOptEnable= true, mAnimAheadEnable= true, mInsertDefaultNum= 1, mFrameInsertEnableList= {}, mSCEnableList= []
+2025-05-27 00:17:34.823 26675-26675 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+2025-05-27 00:17:34.824 26675-26675 OpenGLRenderer          com.tejalabs.falldetection           I  SupportApps size 0
+2025-05-27 00:17:34.827 26675-26702 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:17:34.827 26675-26702 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
+2025-05-27 00:17:34.828 26675-26675 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:17:34.829 26675-26704 colorx                  com.tejalabs.falldetection           D  Successfully found ColorX_Check .
+2025-05-27 00:17:34.829 26675-26704 colorx                  com.tejalabs.falldetection           D  Not available for this game.
+2025-05-27 00:17:34.838 26675-26675 AppCompatDelegate       com.tejalabs.falldetection           D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2025-05-27 00:17:34.840 26675-26697 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 160794467; UID 10359; state: ENABLED
+2025-05-27 00:17:34.849 26675-26675 oplus.andr...actoryImpl com.tejalabs.falldetection           I  Unknow feature:IOplusTextViewRTLUtilForUG
+2025-05-27 00:17:34.850 26675-26675 nativeloader            com.tejalabs.falldetection           D  Load liboplushwui_jni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
+2025-05-27 00:17:34.865 26675-26675 s.falldetection         com.tejalabs.falldetection           W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+2025-05-27 00:17:34.867 26675-26675 ScrollOpti...tionHelper com.tejalabs.falldetection           D  can't find the config file for optimizaiton
+2025-05-27 00:17:34.867 26675-26675 ScrollOpti...tionHelper com.tejalabs.falldetection           D  will not debug for debug is false
+2025-05-27 00:17:34.868 26675-26675 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 171228096; UID 10359; state: ENABLED
+2025-05-27 00:17:34.868 26675-26675 oplus.andr...actoryImpl com.tejalabs.falldetection           I  get feature:IOplusDynamicVsyncFeature
+2025-05-27 00:17:34.868 26675-26675 oplus.andr...actoryImpl com.tejalabs.falldetection           I  get feature:IOplusDynamicVsyncFeature
+2025-05-27 00:17:34.868 26675-26675 oplus.andr...actoryImpl com.tejalabs.falldetection           I  get feature:IOplusDynamicVsyncFeature
+2025-05-27 00:17:34.871 26675-26675 OplusOverS...lerExtImpl com.tejalabs.falldetection           D  Success to read Oplus Scroll Rus list, com.tejalabs.falldetection is enabled? false
+2025-05-27 00:17:34.871 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MIN_VELOCITY_ADJUST_FRICTION 1000.0
+2025-05-27 00:17:34.871 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MIN_VELOCITY_ADJUST_FRICTION 1000.0
+2025-05-27 00:17:34.871 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MID_VELOCITY_ADJUST_FRICTION 4000.0
+2025-05-27 00:17:34.871 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MID_VELOCITY_ADJUST_FRICTION 4000.0
+2025-05-27 00:17:34.871 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MAX_VELOCITY_ADJUST_FRICTION 10000.0
+2025-05-27 00:17:34.871 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MAX_VELOCITY_ADJUST_FRICTION 10000.0
+2025-05-27 00:17:34.872 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  android.widget.OplusSpringOverScroller@69d7981 set OPLUS_FLING_FRICTION_NORMAL 0.12
+2025-05-27 00:17:34.872 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set MID_FLING_BASE_FRICTION 2.5
+2025-05-27 00:17:34.872 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set MID_FLING_BASE_FRICTION 2.5
+2025-05-27 00:17:34.872 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerX -  set SLOW_FLING_BASE_FRICTION 2.5
+2025-05-27 00:17:34.872 26675-26675 OplusSpringOverScroller com.tejalabs.falldetection           D  ScrollerY -  set SLOW_FLING_BASE_FRICTION 2.5
+2025-05-27 00:17:34.874 26675-26675 OplusCusto...ionManager com.tejalabs.falldetection           E  sInstance is null, start a new sInstance
+2025-05-27 00:17:34.876 26675-26675 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 210923482; UID 10359; state: ENABLED
+2025-05-27 00:17:34.899 26675-26675 OplusInputMethodUtil    com.tejalabs.falldetection           D  init sDebug to false, init sDebugIme to false, init sAlwaysOn to false
+2025-05-27 00:17:34.899 26675-26675 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass InputMethodManager.DEBUG = false
+2025-05-27 00:17:34.899 26675-26675 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass ImeFocusController.DEBUG = false
+2025-05-27 00:17:34.899 26675-26675 OplusInputMethodUtil    com.tejalabs.falldetection           D  updateDebugToClass BaseInputConnection.DEBUG = false
+2025-05-27 00:17:34.907 26675-26675 MainActivity            com.tejalabs.falldetection           D  MainActivity created
+2025-05-27 00:17:34.914 26675-26675 ContactManager          com.tejalabs.falldetection           D  ContactManager initialized with 0 contacts
+2025-05-27 00:17:34.916 26675-26675 DataLogger              com.tejalabs.falldetection           D  Log directory initialized: /data/user/0/com.tejalabs.falldetection/files/fall_detection_logs
+2025-05-27 00:17:34.919 26675-26675 MainActivity            com.tejalabs.falldetection           D  All permissions granted
+2025-05-27 00:17:34.920 26675-26675 DataLogger              com.tejalabs.falldetection           D  System event logged - Type: APP, Message: MainActivity created
+2025-05-27 00:17:34.924 26675-26675 ScrollOpti...neManager] com.tejalabs.falldetection           D  updateCurrentActivity: mCurrentActivityName=com.tejalabs.falldetection.MainActivity, isOptEnable=true, isAnimAheadEnable=true, isFrameInsertEnable=true, InsertNum=1, isEnabledForScrollChanged=false
+2025-05-27 00:17:34.924 26675-26675 ActivityThread          com.tejalabs.falldetection           D  ComponentInfo{com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity} checkFinished=false 2
+2025-05-27 00:17:34.924 26675-26675 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:17:34.927 26675-26675 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:17:34.927 26675-26675 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libguiextimpl.so
+2025-05-27 00:17:34.927 26675-26675 nativeloader            com.tejalabs.falldetection           D  Load liboplusgui_jni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
+2025-05-27 00:17:34.929 26675-26675 Compatibil...geReporter com.tejalabs.falldetection           D  Compat change id reported: 237531167; UID 10359; state: DISABLED
+2025-05-27 00:17:34.931 26675-26675 DynamicFra...igManager] com.tejalabs.falldetection           I  initFrameRateConfig: 
+                                                                                                    	levels: [120, 60]
+                                                                                                    	thresholds: [200]
+                                                                                                    	scrollbar fade frame rate: 0
+2025-05-27 00:17:34.931 26675-26675 DynamicFra...igManager] com.tejalabs.falldetection           I  FRTCConfigManager: FRTC_CAPABILITY = 120, package name = com.tejalabs.falldetection, WINDOW_ANIMATION_SPEED_RATE = 10, SCROLL_ANIMATION_SPEED_RATE = 20, MuitiWindowIdleFramerate = 60, PACKAGE_ENABLE = false
+2025-05-27 00:17:34.931 26675-26675 DynamicFra...ontroller] com.tejalabs.falldetection           I  init info: mPackageName = com.tejalabs.falldetection, mIsEnabled = false
+2025-05-27 00:17:34.931 26675-26675 WindowManager           com.tejalabs.falldetection           D  Add to mViews: DecorView@1827227[MainActivity],pkg= com.tejalabs.falldetection
+2025-05-27 00:17:34.931 26675-26702 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:17:34.932 26675-26702 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libhwuiextimpl.so
+2025-05-27 00:17:34.932 26675-26675 ExtensionsLoader        com.tejalabs.falldetection           D  createInstance(64bit) : createExtendedFactory
+2025-05-27 00:17:34.932 26675-26675 ExtensionsLoader        com.tejalabs.falldetection           D  Opened libSchedAssistExtImpl.so
+2025-05-27 00:17:34.940 26675-26675 ViewRootImplExtImpl     com.tejalabs.falldetection           D  onDisplayChanged -1 for VRI android.view.ViewRootImpl@59a09c3
+2025-05-27 00:17:34.941 26675-26675 libc                    com.tejalabs.falldetection           W  Access denied finding property "ro.vendor.input.resample_latency_time"
+2025-05-27 00:17:34.941 26675-26675 InputEventReceiver      com.tejalabs.falldetection           D  Input log is disabled in InputEventReceiver.
+2025-05-27 00:17:34.942 26675-26675 callGcSupression        com.tejalabs.falldetection           D  java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+2025-05-27 00:17:34.942 26675-26675 ResourcesManagerExtImpl com.tejalabs.falldetection           D  applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+2025-05-27 00:17:34.943 26675-26675 Quality                 com.tejalabs.falldetection           I  Skipped: false 2 cost 18.398176 refreshRate 8333452 bit true processName com.tejalabs.falldetection
+2025-05-27 00:17:34.944 26675-26675 OplusBracketLog         com.tejalabs.falldetection           E  [OplusViewMirrorManager] updateHostViewRootIfNeeded, not support android.view.ViewRootImpl@59a09c3
+2025-05-27 00:17:34.954 26675-26675 ViewRootImplExtImpl     com.tejalabs.falldetection           D  wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=808, relayoutAsync=false, newFlags=52953088, title=com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity
+2025-05-27 00:17:34.958 26675-26675 VRI[MainActivity]       com.tejalabs.falldetection           D  relayoutWindow result, sizeChanged:true, surfaceControlChanged:true, transformHintChanged:true, mSurfaceSize:Point(2120, 3000), mLastSurfaceSize:Point(0, 0), mWidth:-1, mHeight:-1, requestedWidth:2120, requestedHeight:3000, transformHint:7, lastTransformHint:-2147483648, installOrientation:3, displayRotation:0, isSurfaceValid:true, attr.flag:-2122252032, useBlast:true, tmpFrames:ClientWindowFrames{frame=[0,0][2120,3000] display=[0,0][2120,3000] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
+2025-05-27 00:17:34.958 26675-26675 VRI[MainActivity]       com.tejalabs.falldetection           W  updateBlastSurfaceIfNeeded, surfaceSize:Point(2120, 3000), lastSurfaceSize:Point(0, 0), format:-1, blastBufferQueue:null
+2025-05-27 00:17:34.961 26675-26675 BufferQueueConsumer     com.tejalabs.falldetection           D  [](id:683300000000,api:0,p:-1,c:26675) connect: controlledByApp=false
+2025-05-27 00:17:34.961 26675-26675 s.falldetection         com.tejalabs.falldetection           W  Unable to find dolphin functions!
+2025-05-27 00:17:34.964 26675-26702 AdrenoGLES-0            com.tejalabs.falldetection           I  QUALCOMM build                   : 21ec731d58, Ifa39d99f17
+                                                                                                    Build Date                       : 05/31/24
+                                                                                                    OpenGL ES Shader Compiler Version: E031.45.02.13
+                                                                                                    Local Branch                     : 
+                                                                                                    Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.14.3.0.11.00.00.973.576
+                                                                                                    Remote Branch                    : NONE
+                                                                                                    Reconstruct Branch               : NOTHING
+2025-05-27 00:17:34.964 26675-26702 AdrenoGLES-0            com.tejalabs.falldetection           I  Build Config                     : S P 16.1.2 AArch64
+2025-05-27 00:17:34.964 26675-26702 AdrenoGLES-0            com.tejalabs.falldetection           I  Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+2025-05-27 00:17:34.964 26675-26702 AdrenoGLES-0            com.tejalabs.falldetection           I  Driver Version                   : 0762.21
+2025-05-27 00:17:34.964 26675-26702 AdrenoGLES-0            com.tejalabs.falldetection           I  Process Name                     : com.tejalabs.falldetection
+2025-05-27 00:17:34.967 26675-26702 AdrenoGLES-0            com.tejalabs.falldetection           I  PFP: 0x01520175, ME: 0x01520023
+2025-05-27 00:17:34.970 26675-26702 AdrenoUtils             com.tejalabs.falldetection           I  <ReadGpuID:357>: Reading chip ID through GSL
+2025-05-27 00:17:34.973 26675-26702 BufferQueueProducer     com.tejalabs.falldetection           D  [VRI[MainActivity]#0(BLAST Consumer)0](id:683300000000,api:1,p:26675,c:26675) connect: api=1 producerControlledByApp=true
+2025-05-27 00:17:34.973 26675-26702 OpenGLRenderer          com.tejalabs.falldetection           E  Unable to match the desired swap behavior.
+2025-05-27 00:17:34.973 26675-26675 SurfaceControl          com.tejalabs.falldetection           I   setExtendedRangeBrightness sc=Surface(name=com.tejalabs.falldetection/com.tejalabs.falldetection.MainActivity)/@0xad7e035,currentBufferRatio=1.0,desiredRatio=1.0
+---------------------------- PROCESS ENDED (26675) for package com.tejalabs.falldetection ----------------------------
+2025-05-27 00:17:34.997 26675-26702 BLASTBufferQueue        com.tejalabs.falldetection           D  [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=2120x3000 mFrameNumber=1 applyTransaction=true mTimestamp=455934808881321(auto) mPendingTransactions.size=0 graphicBufferId=114568252620805 transform=4
+2025-05-27 00:17:34.997 26675-26702 VRI[MainActivity]       com.tejalabs.falldetection           D  Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true syncBuffer=false
+2025-05-27 00:17:34.998 26675-26675 VRI[MainActivity]       com.tejalabs.falldetection           D  draw finished. seqId=0
+2025-05-27 00:17:34.998 26675-26675 VRI[MainActivity]       com.tejalabs.falldetection           D  reportDrawFinished
+2025-05-27 00:17:34.998 26675-26675 ViewRootImplExtImpl     com.tejalabs.falldetection           D  setMaxDequeuedBufferCount: 2
+2025-05-27 00:17:35.000 26675-26675 FallDetectionService    com.tejalabs.falldetection           D  Fall Detection Service created
+2025-05-27 00:17:35.007 26675-26675 SensorDataCollector     com.tejalabs.falldetection           D  SensorDataCollector initialized
+2025-05-27 00:17:35.007 26675-26675 TinyMLProcessor         com.tejalabs.falldetection           W  Model file not found in assets, using fallback
+2025-05-27 00:17:35.007  1831-6456  ANDR-PERF-LM            ven...ti.hardware.perf2-hal-service  E  PrefAppsDB: get_total_pkg_bindapp_count() 663: App = (com.tejalabs.falldetection) not found in LatData DB.
+2025-05-27 00:17:35.008 26675-26675 TinyMLProcessor         com.tejalabs.falldetection           E  Error loading TensorFlow Lite model
+                                                                                                    java.io.FileNotFoundException: fall_detection_model.tflite
+                                                                                                    	at android.content.res.AssetManager.nativeOpenAssetFd(Native Method)
+                                                                                                    	at android.content.res.AssetManager.openFd(AssetManager.java:964)
+                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.loadModelFile(TinyMLProcessor.java:86)
+                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.initializeModel(TinyMLProcessor.java:57)
+                                                                                                    	at com.tejalabs.falldetection.utils.TinyMLProcessor.<init>(TinyMLProcessor.java:48)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.initializeComponents(FallDetectionService.java:160)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.onCreate(FallDetectionService.java:76)
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5010)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255)
+                                                                                                    	at android.os.Looper.loop(Looper.java:364)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053)
+2025-05-27 00:17:35.008 26675-26675 TinyMLProcessor         com.tejalabs.falldetection           W  Using fallback rule-based fall detection
+2025-05-27 00:17:35.009 26675-26675 ContactManager          com.tejalabs.falldetection           D  ContactManager initialized with 0 contacts
+2025-05-27 00:17:35.016 26675-26675 LocationService         com.tejalabs.falldetection           D  LocationService initialized
+2025-05-27 00:17:35.016 26675-26675 EmergencyManager        com.tejalabs.falldetection           D  EmergencyManager initialized
+2025-05-27 00:17:35.016 26675-26675 FallDetectionService    com.tejalabs.falldetection           D  Service components initialized
+2025-05-27 00:17:35.018 26675-26675 AndroidRuntime          com.tejalabs.falldetection           D  Shutting down VM
+2025-05-27 00:17:35.020 26675-26675 AndroidRuntime          com.tejalabs.falldetection           E  FATAL EXCEPTION: main
+                                                                                                    Process: com.tejalabs.falldetection, PID: 26675
+                                                                                                    java.lang.RuntimeException: Unable to create service com.tejalabs.falldetection.services.FallDetectionService: java.lang.SecurityException: com.tejalabs.falldetection: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5035)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255)
+                                                                                                    	at android.os.Looper.loop(Looper.java:364)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053)
+                                                                                                    Caused by: java.lang.SecurityException: com.tejalabs.falldetection: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+                                                                                                    	at android.os.Parcel.createExceptionOrNull(Parcel.java:3087)
+                                                                                                    	at android.os.Parcel.createException(Parcel.java:3071)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:3054)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:2996)
+                                                                                                    	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:5684)
+                                                                                                    	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:1868)
+                                                                                                    	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1804)
+                                                                                                    	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1792)
+                                                                                                    	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:765)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.registerReceivers(FallDetectionService.java:183)
+                                                                                                    	at com.tejalabs.falldetection.services.FallDetectionService.onCreate(FallDetectionService.java:79)
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5010)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2511) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:106) 
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:255) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:364) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8979) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1053) 
+                                                                                                    Caused by: android.os.RemoteException: Remote stack trace:
+                                                                                                    	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(ActivityManagerService.java:15038)
+                                                                                                    	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:2570)
+                                                                                                    	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:3039)
+                                                                                                    	at android.os.Binder.execTransactInternal(Binder.java:1357)
+                                                                                                    	at android.os.Binder.execTransact(Binder.java:1288)
+2025-05-27 00:17:35.024  3254-3825  UAH_JNI                 system_server                        E  uah_event_acquire ! cmdId: 0 ,strPkg: com.tejalabs.falldetection, strIdent: com.android.server.wm, timeout: 720
+2025-05-27 00:17:35.041 26675-26675 Process                 com.tejalabs.falldetection           I  Sending signal. PID: 26675 SIG: 9
+2025-05-27 00:17:35.077  1872-1872  qspmHal                 vendor.qti.qspmhal-service           E  setAppInfoH atPid = 26675, gpuFname:com.tejalabs.falldetection, gpuFver:10

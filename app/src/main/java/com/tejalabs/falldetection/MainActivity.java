@@ -23,6 +23,7 @@ import com.tejalabs.falldetection.activities.SettingsActivity;
 import com.tejalabs.falldetection.services.FallDetectionService;
 import com.tejalabs.falldetection.utils.ContactManager;
 import com.tejalabs.falldetection.utils.DataLogger;
+import com.tejalabs.falldetection.utils.EmergencyManager;
 import com.tejalabs.falldetection.utils.SharedPreferencesManager;
 
 import java.util.ArrayList;
@@ -111,9 +112,18 @@ public class MainActivity extends AppCompatActivity implements FallDetectionServ
      * Initialize utility classes
      */
     private void initializeUtilities() {
-        prefsManager = SharedPreferencesManager.getInstance(this);
-        contactManager = new ContactManager(this);
-        dataLogger = DataLogger.getInstance(this);
+        try {
+            prefsManager = SharedPreferencesManager.getInstance(this);
+            contactManager = new ContactManager(this);
+            dataLogger = DataLogger.getInstance(this);
+            Log.d(TAG, "Utilities initialized successfully");
+        } catch (Exception e) {
+            Log.e(TAG, "Error initializing utilities", e);
+            // Create minimal fallback instances
+            prefsManager = SharedPreferencesManager.getInstance(this);
+            contactManager = new ContactManager(this);
+            dataLogger = DataLogger.getInstance(this);
+        }
     }
 
     /**
@@ -195,8 +205,14 @@ public class MainActivity extends AppCompatActivity implements FallDetectionServ
      * Bind to fall detection service
      */
     private void bindToFallDetectionService() {
-        Intent intent = new Intent(this, FallDetectionService.class);
-        bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+        try {
+            Intent intent = new Intent(this, FallDetectionService.class);
+            boolean bound = bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+            Log.d(TAG, "Service binding attempted: " + bound);
+        } catch (Exception e) {
+            Log.e(TAG, "Error binding to service", e);
+            Toast.makeText(this, "Error connecting to fall detection service", Toast.LENGTH_LONG).show();
+        }
     }
 
     /**
@@ -229,39 +245,63 @@ public class MainActivity extends AppCompatActivity implements FallDetectionServ
      * Update UI based on current state
      */
     private void updateUI() {
-        runOnUiThread(() -> {
-            // Update service status
-            if (isServiceBound && fallDetectionService != null) {
-                tvServiceStatus.setText("Service: " + fallDetectionService.getServiceStatus());
+        try {
+            runOnUiThread(() -> {
+                try {
+                    // Update service status
+                    if (isServiceBound && fallDetectionService != null) {
+                        tvServiceStatus.setText("Service: " + fallDetectionService.getServiceStatus());
 
-                boolean isMonitoring = fallDetectionService.isMonitoring();
-                tvMonitoringStatus.setText("Monitoring: " + (isMonitoring ? "Active" : "Inactive"));
+                        boolean isMonitoring = fallDetectionService.isMonitoring();
+                        tvMonitoringStatus.setText("Monitoring: " + (isMonitoring ? "Active" : "Inactive"));
 
-                btnStartStop.setText(isMonitoring ? "Stop Monitoring" : "Start Monitoring");
-                btnStartStop.setEnabled(true);
+                        btnStartStop.setText(isMonitoring ? "Stop Monitoring" : "Start Monitoring");
+                        btnStartStop.setEnabled(true);
 
-            } else {
-                tvServiceStatus.setText("Service: Not connected");
-                tvMonitoringStatus.setText("Monitoring: Unknown");
-                btnStartStop.setText("Start Service");
-                btnStartStop.setEnabled(true);
-            }
+                    } else {
+                        tvServiceStatus.setText("Service: Not connected");
+                        tvMonitoringStatus.setText("Monitoring: Unknown");
+                        btnStartStop.setText("Start Service");
+                        btnStartStop.setEnabled(true);
+                    }
 
-            // Update emergency status
-            if (isServiceBound && fallDetectionService != null) {
-                boolean isEmergencyActive = fallDetectionService.getEmergencyManager().isEmergencyActive();
-                tvEmergencyStatus.setText("Emergency: " + (isEmergencyActive ? "ACTIVE" : "None"));
-            } else {
-                tvEmergencyStatus.setText("Emergency: Unknown");
-            }
+                    // Update emergency status
+                    if (isServiceBound && fallDetectionService != null) {
+                        try {
+                            EmergencyManager emergencyManager = fallDetectionService.getEmergencyManager();
+                            if (emergencyManager != null) {
+                                boolean isEmergencyActive = emergencyManager.isEmergencyActive();
+                                tvEmergencyStatus.setText("Emergency: " + (isEmergencyActive ? "ACTIVE" : "None"));
+                            } else {
+                                tvEmergencyStatus.setText("Emergency: Not available");
+                            }
+                        } catch (Exception e) {
+                            Log.e(TAG, "Error getting emergency status", e);
+                            tvEmergencyStatus.setText("Emergency: Error");
+                        }
+                    } else {
+                        tvEmergencyStatus.setText("Emergency: Unknown");
+                    }
 
-            // Update contacts status
-            int contactCount = contactManager.getContactCount();
-            tvContactsStatus.setText("Emergency Contacts: " + contactCount + " configured");
+                    // Update contacts status
+                    try {
+                        int contactCount = contactManager != null ? contactManager.getContactCount() : 0;
+                        tvContactsStatus.setText("Emergency Contacts: " + contactCount + " configured");
 
-            // Enable/disable test button based on contacts
-            btnTestEmergency.setEnabled(contactCount > 0);
-        });
+                        // Enable/disable test button based on contacts
+                        btnTestEmergency.setEnabled(contactCount > 0);
+                    } catch (Exception e) {
+                        Log.e(TAG, "Error getting contact count", e);
+                        tvContactsStatus.setText("Emergency Contacts: Error");
+                        btnTestEmergency.setEnabled(false);
+                    }
+                } catch (Exception e) {
+                    Log.e(TAG, "Error updating UI", e);
+                }
+            });
+        } catch (Exception e) {
+            Log.e(TAG, "Error in updateUI", e);
+        }
     }
 
     /**
@@ -323,16 +363,26 @@ public class MainActivity extends AppCompatActivity implements FallDetectionServ
      * Handle test emergency button click
      */
     private void onTestEmergencyClicked(View view) {
-        if (contactManager.getContactCount() == 0) {
-            Toast.makeText(this, "No emergency contacts configured", Toast.LENGTH_SHORT).show();
-            return;
-        }
+        try {
+            if (contactManager == null || contactManager.getContactCount() == 0) {
+                Toast.makeText(this, "No emergency contacts configured", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-        if (isServiceBound && fallDetectionService != null) {
-            fallDetectionService.getEmergencyManager().testEmergencyProcedures();
-            Toast.makeText(this, "Test emergency alert sent", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Service not available", Toast.LENGTH_SHORT).show();
+            if (isServiceBound && fallDetectionService != null) {
+                EmergencyManager emergencyManager = fallDetectionService.getEmergencyManager();
+                if (emergencyManager != null) {
+                    emergencyManager.testEmergencyProcedures();
+                    Toast.makeText(this, "Test emergency alert sent", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Emergency manager not available", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(this, "Service not available", Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error testing emergency procedures", e);
+            Toast.makeText(this, "Error testing emergency system", Toast.LENGTH_SHORT).show();
         }
     }
 

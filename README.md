@@ -53,23 +53,6 @@ An Android application that uses TinyML (TensorFlow Lite) and foreground service
 - Device with Android 7.0 (API 24) or higher
 - Physical device recommended for testing (sensors required)
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/t-teja/Fall-Detection.git
-   cd Fall-Detection
-   ```
-
-2. **Open in Android Studio**
-   - Open Android Studio
-   - Select "Open an existing project"
-   - Navigate to the cloned directory
-
-3. **Build and Run**
-   - Connect an Android device or start an emulator
-   - Click "Run" or press Ctrl+R
-   - Grant required permissions when prompted
 
 ### Required Permissions
 The app requires the following permissions:
@@ -194,7 +177,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Getting Help
 - **Issues**: Report bugs on [GitHub Issues](https://github.com/t-teja/Fall-Detection/issues)
 - **Discussions**: Join discussions on [GitHub Discussions](https://github.com/t-teja/Fall-Detection/discussions)
-- **Email**: Contact us at support@tejalabs.com
+
 
 ### Known Issues
 - TensorFlow Lite model not included (placeholder implementation)
