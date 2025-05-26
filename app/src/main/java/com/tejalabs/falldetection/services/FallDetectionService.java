@@ -181,18 +181,30 @@ public class FallDetectionService extends Service implements
      * Register broadcast receivers
      */
     private void registerReceivers() {
-        // Emergency cancel receiver
-        emergencyCancelReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                if (ACTION_CANCEL_EMERGENCY.equals(intent.getAction())) {
-                    cancelEmergency();
+        try {
+            // Emergency cancel receiver
+            emergencyCancelReceiver = new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    if (ACTION_CANCEL_EMERGENCY.equals(intent.getAction())) {
+                        cancelEmergency();
+                    }
                 }
-            }
-        };
+            };
 
-        IntentFilter filter = new IntentFilter(ACTION_CANCEL_EMERGENCY);
-        registerReceiver(emergencyCancelReceiver, filter);
+            IntentFilter filter = new IntentFilter(ACTION_CANCEL_EMERGENCY);
+
+            // For Android 13+ (API 33+), we need to specify RECEIVER_NOT_EXPORTED
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+                registerReceiver(emergencyCancelReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+            } else {
+                registerReceiver(emergencyCancelReceiver, filter);
+            }
+
+            Log.d(TAG, "Broadcast receivers registered successfully");
+        } catch (Exception e) {
+            Log.e(TAG, "Error registering broadcast receivers", e);
+        }
     }
 
     /**
@@ -202,8 +214,12 @@ public class FallDetectionService extends Service implements
         if (emergencyCancelReceiver != null) {
             try {
                 unregisterReceiver(emergencyCancelReceiver);
+                emergencyCancelReceiver = null;
+                Log.d(TAG, "Broadcast receivers unregistered successfully");
             } catch (IllegalArgumentException e) {
                 Log.w(TAG, "Receiver not registered", e);
+            } catch (Exception e) {
+                Log.e(TAG, "Error unregistering broadcast receivers", e);
             }
         }
     }
