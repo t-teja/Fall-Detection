@@ -29,6 +29,7 @@ public class SharedPreferencesManager {
     public static final String KEY_LAST_FALL_DETECTION = "last_fall_detection";
     public static final String KEY_TOTAL_FALLS_DETECTED = "total_falls_detected";
     public static final String KEY_FALSE_POSITIVES = "false_positives";
+    public static final String KEY_USER_NAME = "user_name";
 
     // Default Values
     public static final boolean DEFAULT_FALL_DETECTION_ENABLED = true;
@@ -138,6 +139,15 @@ public class SharedPreferencesManager {
 
     public int getFalsePositives() {
         return sharedPreferences.getInt(KEY_FALSE_POSITIVES, 0);
+    }
+
+    // User Profile Settings
+    public void setUserName(String userName) {
+        editor.putString(KEY_USER_NAME, userName).apply();
+    }
+
+    public String getUserName() {
+        return sharedPreferences.getString(KEY_USER_NAME, "Fall Detection User");
     }
 
     // Utility Methods

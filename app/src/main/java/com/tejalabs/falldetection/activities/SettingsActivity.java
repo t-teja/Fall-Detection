@@ -6,6 +6,9 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -13,6 +16,7 @@ import android.widget.Toast;
 
 import com.tejalabs.falldetection.R;
 import com.tejalabs.falldetection.utils.SharedPreferencesManager;
+import com.tejalabs.falldetection.utils.WhatsAppManager;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -28,9 +32,13 @@ public class SettingsActivity extends AppCompatActivity {
     private TextView tvSensitivityValue;
     private TextView tvCountdownValue;
     private TextView tvLearningStatus;
+    private EditText etUserName;
+    private TextView tvWhatsAppStatus;
+    private Button btnInstallWhatsApp;
 
     // Utilities
     private SharedPreferencesManager prefsManager;
+    private WhatsAppManager whatsAppManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +49,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Initialize utilities
         prefsManager = SharedPreferencesManager.getInstance(this);
+        whatsAppManager = new WhatsAppManager(this);
 
         // Setup toolbar
         setupToolbar();
@@ -50,6 +59,9 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Load current settings
         loadSettings();
+
+        // Update WhatsApp status
+        updateWhatsAppStatus();
     }
 
     /**
@@ -80,6 +92,9 @@ public class SettingsActivity extends AppCompatActivity {
         tvSensitivityValue = findViewById(R.id.tv_sensitivity_value);
         tvCountdownValue = findViewById(R.id.tv_countdown_value);
         tvLearningStatus = findViewById(R.id.tv_learning_status);
+        etUserName = findViewById(R.id.et_user_name);
+        tvWhatsAppStatus = findViewById(R.id.tv_whatsapp_status);
+        btnInstallWhatsApp = findViewById(R.id.btn_install_whatsapp);
 
         // Set up listeners
         setupListeners();
@@ -158,6 +173,24 @@ public class SettingsActivity extends AppCompatActivity {
                 Log.d(TAG, "Emergency countdown: " + countdown);
             }
         });
+
+        // User name text change listener
+        etUserName.setOnFocusChangeListener((v, hasFocus) -> {
+            if (!hasFocus) {
+                String userName = etUserName.getText().toString().trim();
+                if (!userName.isEmpty()) {
+                    prefsManager.setUserName(userName);
+                    Toast.makeText(this, "Name updated", Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "User name updated: " + userName);
+                }
+            }
+        });
+
+        // WhatsApp install button
+        btnInstallWhatsApp.setOnClickListener(v -> {
+            whatsAppManager.openWhatsAppInPlayStore();
+            Toast.makeText(this, "Opening WhatsApp in Play Store", Toast.LENGTH_SHORT).show();
+        });
     }
 
     /**
@@ -180,6 +213,10 @@ public class SettingsActivity extends AppCompatActivity {
             int countdown = prefsManager.getEmergencyCountdown();
             seekBarCountdown.setProgress(Math.max(0, Math.min(30, countdown - 5)));
             tvCountdownValue.setText(countdown + " seconds");
+
+            // Load user name
+            String userName = prefsManager.getUserName();
+            etUserName.setText(userName);
 
             Log.d(TAG, "Settings loaded successfully");
         } catch (Exception e) {
@@ -228,6 +265,27 @@ public class SettingsActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.e(TAG, "Error updating learning status", e);
             tvLearningStatus.setText("🧠 TinyML adaptive learning enabled");
+        }
+    }
+
+    /**
+     * Update WhatsApp status display
+     */
+    private void updateWhatsAppStatus() {
+        try {
+            if (whatsAppManager.isWhatsAppInstalled()) {
+                tvWhatsAppStatus.setText("✅ WhatsApp Available");
+                tvWhatsAppStatus.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+                btnInstallWhatsApp.setVisibility(View.GONE);
+            } else {
+                tvWhatsAppStatus.setText("❌ WhatsApp Not Installed");
+                tvWhatsAppStatus.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+                btnInstallWhatsApp.setVisibility(View.VISIBLE);
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error updating WhatsApp status", e);
+            tvWhatsAppStatus.setText("❓ WhatsApp Status Unknown");
+            tvWhatsAppStatus.setTextColor(getResources().getColor(android.R.color.darker_gray));
         }
     }
 

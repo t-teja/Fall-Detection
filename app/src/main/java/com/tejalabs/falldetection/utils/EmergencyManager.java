@@ -32,6 +32,7 @@ public class EmergencyManager {
     private NotificationHelper notificationHelper;
     private LocationService locationService;
     private SoundManager soundManager;
+    private WhatsAppManager whatsAppManager;
 
     // Emergency countdown
     private Handler countdownHandler;
@@ -66,6 +67,7 @@ public class EmergencyManager {
         this.notificationHelper = NotificationHelper.getInstance(context);
         this.locationService = new LocationService(context);
         this.soundManager = SoundManager.getInstance(context);
+        this.whatsAppManager = new WhatsAppManager(context);
         this.countdownHandler = new Handler(Looper.getMainLooper());
 
         Log.d(TAG, "EmergencyManager initialized");
@@ -253,10 +255,8 @@ public class EmergencyManager {
         locationService.getCurrentLocation(new LocationService.LocationCallback() {
             @Override
             public void onLocationReceived(Location location) {
-                String locationText = formatLocationText(location);
-
-                // Send SMS alerts
-                sendEmergencySMS(locationText);
+                // Send emergency messages with location
+                sendEmergencyMessages(location);
 
                 // Make emergency call if enabled
                 if (prefsManager.isAutoCallEnabled()) {
@@ -271,8 +271,8 @@ public class EmergencyManager {
             public void onLocationError(String error) {
                 Log.e(TAG, "Location error during emergency: " + error);
 
-                // Send SMS without location
-                sendEmergencySMS("Location unavailable");
+                // Send emergency messages without location
+                sendEmergencyMessages(null);
 
                 // Make emergency call if enabled
                 if (prefsManager.isAutoCallEnabled()) {
@@ -286,41 +286,91 @@ public class EmergencyManager {
     }
 
     /**
-     * Send emergency SMS to all contacts
+     * Send emergency messages (SMS and WhatsApp) to all contacts
      */
-    private void sendEmergencySMS(String locationText) {
-        if (!hasPermission(Manifest.permission.SEND_SMS)) {
-            Log.e(TAG, "SMS permission not granted");
-            return;
-        }
-
+    private void sendEmergencyMessages(Location location) {
         List<EmergencyContact> contacts = contactManager.getEmergencyContacts();
         if (contacts.isEmpty()) {
             Log.w(TAG, "No emergency contacts configured");
             return;
         }
 
-        String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
-            .format(new Date());
+        // Get user name from preferences
+        String userName = prefsManager.getUserName();
+        if (userName == null || userName.trim().isEmpty()) {
+            userName = "Fall Detection User";
+        }
 
-        String message = String.format(
-            "EMERGENCY ALERT: Fall detected at %s. Location: %s. Please check on me immediately.",
-            timestamp, locationText
-        );
+        // Create emergency message
+        String message;
+        if (location != null) {
+            message = WhatsAppManager.createEmergencyMessage(
+                userName,
+                location.getLatitude(),
+                location.getLongitude()
+            );
+        } else {
+            message = WhatsAppManager.createEmergencyMessageNoLocation(userName);
+        }
 
-        SmsManager smsManager = SmsManager.getDefault();
+        int smsCount = 0;
+        int whatsappCount = 0;
+        int totalContacts = contacts.size();
 
         for (EmergencyContact contact : contacts) {
-            try {
-                smsManager.sendTextMessage(contact.getPhoneNumber(), null, message, null, null);
-                Log.i(TAG, "Emergency SMS sent to: " + contact.getName());
-            } catch (Exception e) {
-                Log.e(TAG, "Failed to send SMS to " + contact.getName(), e);
+            boolean smsSent = false;
+            boolean whatsappSent = false;
+
+            // Send WhatsApp message if enabled for this contact
+            if (contact.isWhatsappEnabled() && whatsAppManager.isWhatsAppInstalled()) {
+                try {
+                    whatsappSent = whatsAppManager.sendEmergencyMessage(contact.getPhoneNumber(), message);
+                    if (whatsappSent) {
+                        whatsappCount++;
+                        Log.i(TAG, "WhatsApp message sent to: " + contact.getName());
+                    }
+                } catch (Exception e) {
+                    Log.e(TAG, "Failed to send WhatsApp to " + contact.getName(), e);
+                }
+            }
+
+            // Send SMS if enabled for this contact and SMS permission is available
+            if (contact.isSmsEnabled() && hasPermission(Manifest.permission.SEND_SMS)) {
+                try {
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage(contact.getPhoneNumber(), null, message, null, null);
+                    smsSent = true;
+                    smsCount++;
+                    Log.i(TAG, "Emergency SMS sent to: " + contact.getName());
+                } catch (Exception e) {
+                    Log.e(TAG, "Failed to send SMS to " + contact.getName(), e);
+                }
+            }
+
+            // Log the result for this contact
+            if (smsSent || whatsappSent) {
+                Log.i(TAG, String.format("Emergency alert sent to %s via %s%s%s",
+                    contact.getName(),
+                    whatsappSent ? "WhatsApp" : "",
+                    (whatsappSent && smsSent) ? " and " : "",
+                    smsSent ? "SMS" : ""
+                ));
+            } else {
+                Log.w(TAG, "No emergency message sent to " + contact.getName() + " - no enabled methods available");
             }
         }
 
-        notificationHelper.showStatusUpdate("Emergency SMS Sent",
-            "Alerts sent to " + contacts.size() + " emergency contacts");
+        // Show status notification
+        String statusMessage = String.format("Emergency alerts sent to %d contacts", totalContacts);
+        if (whatsappCount > 0 && smsCount > 0) {
+            statusMessage += String.format(" (%d WhatsApp, %d SMS)", whatsappCount, smsCount);
+        } else if (whatsappCount > 0) {
+            statusMessage += String.format(" (%d WhatsApp)", whatsappCount);
+        } else if (smsCount > 0) {
+            statusMessage += String.format(" (%d SMS)", smsCount);
+        }
+
+        notificationHelper.showStatusUpdate("Emergency Messages Sent", statusMessage);
     }
 
     /**
@@ -355,19 +405,10 @@ public class EmergencyManager {
     }
 
     /**
-     * Format location information for SMS
+     * Get WhatsApp manager for external access
      */
-    private String formatLocationText(Location location) {
-        if (location == null) {
-            return "Location unavailable";
-        }
-
-        return String.format(Locale.getDefault(),
-            "Lat: %.6f, Lon: %.6f (Accuracy: %.0fm)",
-            location.getLatitude(),
-            location.getLongitude(),
-            location.getAccuracy()
-        );
+    public WhatsAppManager getWhatsAppManager() {
+        return whatsAppManager;
     }
 
     /**
@@ -419,18 +460,66 @@ public class EmergencyManager {
     public void testEmergencyProcedures() {
         Log.i(TAG, "Testing emergency procedures");
 
-        // Send test SMS
         List<EmergencyContact> contacts = contactManager.getEmergencyContacts();
-        if (!contacts.isEmpty() && hasPermission(Manifest.permission.SEND_SMS)) {
-            String testMessage = "This is a test of the fall detection emergency system. Please ignore.";
-            SmsManager smsManager = SmsManager.getDefault();
+        if (contacts.isEmpty()) {
+            Log.w(TAG, "No emergency contacts configured for test");
+            return;
+        }
 
+        // Get user name
+        String userName = prefsManager.getUserName();
+        if (userName == null || userName.trim().isEmpty()) {
+            userName = "Fall Detection User";
+        }
+
+        // Create test message
+        String testMessage = String.format(
+            "🧪 TEST MESSAGE 🧪\n\n" +
+            "This is a test of %s's fall detection emergency system.\n\n" +
+            "📱 Both SMS and WhatsApp notifications are working correctly.\n\n" +
+            "⏰ Test Time: %s\n\n" +
+            "Please ignore this message - no emergency assistance is needed.\n\n" +
+            "Fall Detection App Test",
+            userName,
+            new SimpleDateFormat("MMM dd, yyyy 'at' hh:mm a", Locale.getDefault())
+                .format(new Date())
+        );
+
+        int testsSent = 0;
+        EmergencyContact testContact = contacts.get(0); // Test with first contact
+
+        // Test WhatsApp if available and enabled
+        if (testContact.isWhatsappEnabled() && whatsAppManager.isWhatsAppInstalled()) {
             try {
-                smsManager.sendTextMessage(contacts.get(0).getPhoneNumber(), null, testMessage, null, null);
-                notificationHelper.showStatusUpdate("Test SMS Sent", "Emergency system test completed");
+                boolean whatsappSent = whatsAppManager.sendEmergencyMessage(testContact.getPhoneNumber(), testMessage);
+                if (whatsappSent) {
+                    testsSent++;
+                    Log.i(TAG, "Test WhatsApp message sent to: " + testContact.getName());
+                }
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to send test WhatsApp message", e);
+            }
+        }
+
+        // Test SMS if available and enabled
+        if (testContact.isSmsEnabled() && hasPermission(Manifest.permission.SEND_SMS)) {
+            try {
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage(testContact.getPhoneNumber(), null, testMessage, null, null);
+                testsSent++;
+                Log.i(TAG, "Test SMS sent to: " + testContact.getName());
             } catch (Exception e) {
                 Log.e(TAG, "Failed to send test SMS", e);
             }
+        }
+
+        // Show result notification
+        if (testsSent > 0) {
+            notificationHelper.showStatusUpdate("Emergency Test Completed",
+                "Test messages sent to " + testContact.getName());
+        } else {
+            notificationHelper.showStatusUpdate("Emergency Test Failed",
+                "No test messages could be sent - check permissions and settings");
         }
     }
 
