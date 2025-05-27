@@ -153,15 +153,16 @@ public class SharedPreferencesManager {
     }
 
     // Get sensitivity threshold based on level (1-5)
+    // Note: This is now used differently in the new TinyML processor
     public float getSensitivityThreshold() {
         int level = getSensitivityLevel();
         switch (level) {
-            case 1: return 2.5f; // Very Low
-            case 2: return 2.0f; // Low
-            case 3: return 1.5f; // Medium (default)
-            case 4: return 1.0f; // High
-            case 5: return 0.8f; // Very High
-            default: return 1.5f;
+            case 1: return 3.0f; // Very Low sensitivity (high thresholds, fewer false positives)
+            case 2: return 2.0f; // Low sensitivity
+            case 3: return 1.0f; // Medium sensitivity (default)
+            case 4: return 0.7f; // High sensitivity
+            case 5: return 0.5f; // Very High sensitivity (low thresholds, more sensitive)
+            default: return 1.0f;
         }
     }
 

@@ -31,6 +31,7 @@ public class FallDetectionService extends Service implements
     public static final String ACTION_START_MONITORING = "com.tejalabs.falldetection.START_MONITORING";
     public static final String ACTION_STOP_MONITORING = "com.tejalabs.falldetection.STOP_MONITORING";
     public static final String ACTION_CANCEL_EMERGENCY = "com.tejalabs.falldetection.CANCEL_EMERGENCY";
+    public static final String ACTION_ACTIVATE_EMERGENCY = "com.tejalabs.falldetection.ACTIVATE_EMERGENCY";
 
     // Service state
     private boolean isMonitoring = false;
@@ -93,14 +94,25 @@ public class FallDetectionService extends Service implements
 
         if (intent != null) {
             String action = intent.getAction();
+            Log.d(TAG, "Service intent action: " + action);
 
             if (ACTION_START_MONITORING.equals(action)) {
+                Log.i(TAG, "Processing start monitoring service intent");
                 startMonitoring();
             } else if (ACTION_STOP_MONITORING.equals(action)) {
+                Log.i(TAG, "Processing stop monitoring service intent");
                 stopMonitoring();
             } else if (ACTION_CANCEL_EMERGENCY.equals(action)) {
+                Log.i(TAG, "Processing cancel emergency service intent");
                 cancelEmergency();
+            } else if (ACTION_ACTIVATE_EMERGENCY.equals(action)) {
+                Log.i(TAG, "Processing activate emergency service intent");
+                activateEmergencyImmediately();
+            } else {
+                Log.d(TAG, "No specific action or unknown action: " + action);
             }
+        } else {
+            Log.d(TAG, "Service intent is null");
         }
 
         // Start foreground service
@@ -182,17 +194,28 @@ public class FallDetectionService extends Service implements
      */
     private void registerReceivers() {
         try {
-            // Emergency cancel receiver
+            // Emergency action receiver
             emergencyCancelReceiver = new BroadcastReceiver() {
                 @Override
                 public void onReceive(Context context, Intent intent) {
-                    if (ACTION_CANCEL_EMERGENCY.equals(intent.getAction())) {
+                    String action = intent.getAction();
+                    Log.d(TAG, "Broadcast received with action: " + action);
+
+                    if (ACTION_CANCEL_EMERGENCY.equals(action)) {
+                        Log.i(TAG, "Processing cancel emergency broadcast");
                         cancelEmergency();
+                    } else if (ACTION_ACTIVATE_EMERGENCY.equals(action)) {
+                        Log.i(TAG, "Processing activate emergency broadcast");
+                        activateEmergencyImmediately();
+                    } else {
+                        Log.w(TAG, "Unknown action received: " + action);
                     }
                 }
             };
 
-            IntentFilter filter = new IntentFilter(ACTION_CANCEL_EMERGENCY);
+            IntentFilter filter = new IntentFilter();
+            filter.addAction(ACTION_CANCEL_EMERGENCY);
+            filter.addAction(ACTION_ACTIVATE_EMERGENCY);
 
             // For Android 13+ (API 33+), we need to specify RECEIVER_NOT_EXPORTED
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
@@ -332,6 +355,17 @@ public class FallDetectionService extends Service implements
     }
 
     /**
+     * Activate emergency immediately (user confirmed)
+     */
+    public void activateEmergencyImmediately() {
+        Log.i(TAG, "Emergency activated immediately by user");
+
+        if (emergencyManager != null) {
+            emergencyManager.activateEmergencyImmediately();
+        }
+    }
+
+    /**
      * Clean up all components
      */
     private void cleanupComponents() {
@@ -367,19 +401,26 @@ public class FallDetectionService extends Service implements
 
         // Check for fall detection
         if (result.isFall) {
-            onFallDetected(result.confidence);
+            onFallDetected(result.confidence, dataWindow);
         }
     }
 
     @Override
     public void onFallDetected(float confidence) {
+        onFallDetected(confidence, null);
+    }
+
+    /**
+     * Handle fall detection with sensor data for learning
+     */
+    public void onFallDetected(float confidence, SensorDataCollector.SensorDataWindow dataWindow) {
         Log.w(TAG, "Fall detected with confidence: " + confidence);
 
         // Log fall detection event
         dataLogger.logFallDetectionEvent(confidence, mlProcessor.getModelInfo(), false, false);
 
-        // Start emergency response
-        emergencyManager.startEmergencyResponse(confidence);
+        // Start emergency response with sensor data for learning
+        emergencyManager.startEmergencyResponse(confidence, dataWindow);
 
         // Notify listener
         if (serviceListener != null) {
@@ -428,6 +469,16 @@ public class FallDetectionService extends Service implements
 
         if (serviceListener != null) {
             serviceListener.onEmergencyStateChanged(false, 0);
+        }
+    }
+
+    @Override
+    public void onFalseAlarmLearning(SensorDataCollector.SensorDataWindow sensorData, float confidence) {
+        Log.i(TAG, "Learning from false alarm - confidence: " + confidence);
+
+        // Let the TinyML processor learn from this false alarm
+        if (mlProcessor != null && sensorData != null) {
+            mlProcessor.learnFromFalseAlarm(sensorData, confidence);
         }
     }
 

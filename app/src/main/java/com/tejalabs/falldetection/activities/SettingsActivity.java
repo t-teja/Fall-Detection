@@ -27,6 +27,7 @@ public class SettingsActivity extends AppCompatActivity {
     private SeekBar seekBarCountdown;
     private TextView tvSensitivityValue;
     private TextView tvCountdownValue;
+    private TextView tvLearningStatus;
 
     // Utilities
     private SharedPreferencesManager prefsManager;
@@ -78,6 +79,7 @@ public class SettingsActivity extends AppCompatActivity {
         seekBarCountdown = findViewById(R.id.seekbar_countdown);
         tvSensitivityValue = findViewById(R.id.tv_sensitivity_value);
         tvCountdownValue = findViewById(R.id.tv_countdown_value);
+        tvLearningStatus = findViewById(R.id.tv_learning_status);
 
         // Set up listeners
         setupListeners();
@@ -108,13 +110,13 @@ public class SettingsActivity extends AppCompatActivity {
             Log.d(TAG, "Location tracking: " + isChecked);
         });
 
-        // Sensitivity seekbar
+        // TinyML Sensitivity seekbar
         seekBarSensitivity.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (fromUser) {
-                    float sensitivity = 0.5f + (progress / 100.0f) * 1.0f; // Range: 0.5 to 1.5
-                    tvSensitivityValue.setText(String.format("%.1f", sensitivity));
+                    String sensitivityText = getSensitivityText(progress + 1);
+                    tvSensitivityValue.setText(sensitivityText);
                 }
             }
 
@@ -123,10 +125,15 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                float sensitivity = 0.5f + (seekBar.getProgress() / 100.0f) * 1.0f;
-                prefsManager.setSensitivityThreshold(sensitivity);
-                Toast.makeText(SettingsActivity.this, "Sensitivity updated", Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "Sensitivity: " + sensitivity);
+                int level = seekBar.getProgress() + 1; // Convert 0-4 to 1-5
+                prefsManager.setSensitivityLevel(level);
+                String sensitivityText = getSensitivityText(level);
+                tvSensitivityValue.setText(sensitivityText);
+                Toast.makeText(SettingsActivity.this, "TinyML sensitivity updated to " + sensitivityText, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "TinyML Sensitivity level: " + level);
+
+                // Update learning status
+                updateLearningStatus();
             }
         });
 
@@ -164,11 +171,10 @@ public class SettingsActivity extends AppCompatActivity {
             switchEmergencySMS.setChecked(prefsManager.isEmergencySMSEnabled());
             switchLocationTracking.setChecked(prefsManager.isLocationTrackingEnabled());
 
-            // Load sensitivity
-            float sensitivity = prefsManager.getSensitivityThreshold();
-            int sensitivityProgress = (int) ((sensitivity - 0.5f) / 1.0f * 100);
-            seekBarSensitivity.setProgress(Math.max(0, Math.min(100, sensitivityProgress)));
-            tvSensitivityValue.setText(String.format("%.1f", sensitivity));
+            // Load TinyML sensitivity
+            int sensitivityLevel = prefsManager.getSensitivityLevel();
+            seekBarSensitivity.setProgress(sensitivityLevel - 1); // Convert 1-5 to 0-4
+            tvSensitivityValue.setText(getSensitivityText(sensitivityLevel));
 
             // Load countdown
             int countdown = prefsManager.getEmergencyCountdown();
@@ -179,6 +185,49 @@ public class SettingsActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.e(TAG, "Error loading settings", e);
             Toast.makeText(this, "Error loading settings", Toast.LENGTH_SHORT).show();
+        }
+
+        // Update learning status
+        updateLearningStatus();
+    }
+
+    /**
+     * Get sensitivity text based on level
+     */
+    private String getSensitivityText(int level) {
+        switch (level) {
+            case 1: return "Very Low (Fewest false alarms)";
+            case 2: return "Low";
+            case 3: return "Medium (Recommended)";
+            case 4: return "High";
+            case 5: return "Very High (Most sensitive)";
+            default: return "Medium (Recommended)";
+        }
+    }
+
+    /**
+     * Update learning status display
+     */
+    private void updateLearningStatus() {
+        try {
+            int falsePositives = prefsManager.getFalsePositives();
+            int totalDetections = prefsManager.getTotalFallsDetected();
+
+            String statusText;
+            if (totalDetections == 0) {
+                statusText = "🧠 TinyML ready to learn from your patterns";
+            } else if (falsePositives == 0) {
+                statusText = "✅ Perfect detection! No false alarms yet";
+            } else {
+                float accuracy = ((float)(totalDetections - falsePositives) / totalDetections) * 100;
+                statusText = String.format("🧠 Learning... %.0f%% accuracy (%d false alarms)",
+                    accuracy, falsePositives);
+            }
+
+            tvLearningStatus.setText(statusText);
+        } catch (Exception e) {
+            Log.e(TAG, "Error updating learning status", e);
+            tvLearningStatus.setText("🧠 TinyML adaptive learning enabled");
         }
     }
 

@@ -291,7 +291,7 @@
                         android:textStyle="bold"
                         android:layout_marginBottom="16dp" />
 
-                    <!-- Sensitivity -->
+                    <!-- TinyML Sensitivity -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -300,7 +300,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Detection Sensitivity"
+                            android:text="TinyML Detection Sensitivity"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:layout_marginBottom="4dp" />
@@ -308,7 +308,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Adjust how sensitive the fall detection algorithm is"
+                            android:text="AI-powered fall detection with adaptive learning from false alarms"
                             android:textSize="14sp"
                             android:textColor="@color/secondary_text"
                             android:layout_marginBottom="8dp" />
@@ -317,7 +317,7 @@
                             android:id="@+id/tv_sensitivity_value"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1.0"
+                            android:text="Medium (Recommended)"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/primary_color"
@@ -327,8 +327,8 @@
                             android:id="@+id/seekbar_sensitivity"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:max="100"
-                            android:progress="50" />
+                            android:max="4"
+                            android:progress="2" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -340,7 +340,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Less Sensitive"
+                                android:text="Very Low"
                                 android:textSize="12sp"
                                 android:textColor="@color/secondary_text" />
 
@@ -348,10 +348,37 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="More Sensitive"
+                                android:text="Very High"
                                 android:textSize="12sp"
                                 android:textColor="@color/secondary_text"
                                 android:gravity="end" />
+
+                        </LinearLayout>
+
+                        <!-- Learning Status -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@android:color/transparent"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🧠"
+                                android:textSize="16sp"
+                                android:layout_marginEnd="8dp" />
+
+                            <TextView
+                                android:id="@+id/tv_learning_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TinyML is learning your patterns..."
+                                android:textSize="12sp"
+                                android:textColor="@android:color/holo_green_dark" />
 
                         </LinearLayout>
 

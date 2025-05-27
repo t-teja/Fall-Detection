@@ -25,6 +25,7 @@ import com.tejalabs.falldetection.utils.ContactManager;
 import com.tejalabs.falldetection.utils.DataLogger;
 import com.tejalabs.falldetection.utils.EmergencyManager;
 import com.tejalabs.falldetection.utils.SharedPreferencesManager;
+import com.tejalabs.falldetection.views.SensorGraphView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements FallDetectionServ
     private TextView tvMonitoringStatus;
     private TextView tvEmergencyStatus;
     private TextView tvContactsStatus;
+    private SensorGraphView sensorGraph;
 
     // Service connection
     private FallDetectionService fallDetectionService;
@@ -139,6 +141,7 @@ public class MainActivity extends AppCompatActivity implements FallDetectionServ
         tvMonitoringStatus = findViewById(R.id.tv_monitoring_status);
         tvEmergencyStatus = findViewById(R.id.tv_emergency_status);
         tvContactsStatus = findViewById(R.id.tv_contacts_status);
+        sensorGraph = findViewById(R.id.sensor_graph);
 
         // Set click listeners
         btnStartStop.setOnClickListener(this::onStartStopClicked);
@@ -257,6 +260,14 @@ public class MainActivity extends AppCompatActivity implements FallDetectionServ
 
                         btnStartStop.setText(isMonitoring ? "Stop Monitoring" : "Start Monitoring");
                         btnStartStop.setEnabled(true);
+
+                        // Update sensor graph with simulated data when monitoring
+                        if (isMonitoring && sensorGraph != null) {
+                            // Simulate normal sensor data (accelerometer around 9.8 m/s², gyroscope around 0-2)
+                            float accelMagnitude = 9.8f + (float)(Math.random() * 2.0 - 1.0); // 8.8 to 10.8
+                            float gyroMagnitude = (float)(Math.random() * 2.0); // 0 to 2
+                            sensorGraph.addDataPoint(accelMagnitude, gyroMagnitude);
+                        }
 
                     } else {
                         tvServiceStatus.setText("Service: Not connected");
@@ -400,6 +411,11 @@ public class MainActivity extends AppCompatActivity implements FallDetectionServ
         runOnUiThread(() -> {
             Toast.makeText(this, "FALL DETECTED! Confidence: " + String.format("%.1f%%", confidence * 100),
                 Toast.LENGTH_LONG).show();
+
+            // Add a spike to the graph to visualize the fall detection
+            if (sensorGraph != null) {
+                sensorGraph.addDataPoint(25.0f, 15.0f); // High values to show fall detection
+            }
         });
     }
 
